@@ -1074,6 +1074,8 @@ textArea.areaMd {height:150px;}
 .lytLogin .cptLogin .lgInner > div.fnBox > .authCov > .authLoginBtn span.icon {display:block; width:70px; height:50px; background:url(../images/common/auth_icon.png)50% 50% no-repeat; margin:0 auto 15px;}
 .lytLogin .cptLogin .lgInner > div.fnBox > .authCov > .authLoginBtn span.txt {font-size:20px; color:#fff; font-weight:bold; letter-spacing:-0.6px;}
 
+.lytLogin .cptLogin.signUp {height:auto;}
+.lytLogin .cptLogin.signUp .lgInner > div.fnBox {width:auto; height:auto;}
 /*20240321 돌보미 로그인 타입*/
 /* .lytLogin.dolbom .cptLogin .lgInner > div.titBox { background:#41403e;}
 .lytLogin.dolbom .cptLogin .lgInner > div.fnBox > .lgBtn a {background:#fe794d;}

@@ -370,12 +370,20 @@
             <div id="endpicker-container02" style="margin-left: -1px;"></div>
         </div>
     </div>
+    <div class="frmGroup">
+        <div class="textBox">달력이 위로 뜹니다</div>
+        <div class="tui-datepicker-input tui-datetime-input tui-has-focus">
+            <input type="text" id="datepicker-input04" aria-label="Date-Time">
+            <div id="datepicker-container04" style="margin-top: -1px;" class="tui-reverse"></div><!-- addClass - tui-reverse : 달력이 상단으로 나타남 -->
+        </div>
+    </div>
     <script>
         //단일
         datePicker("datepicker-input","datepicker-container");
         datePicker("datepicker-input01","datepicker-container01");
         datePicker("datepicker-input02","datepicker-container02");
         datePicker("datepicker-input03","datepicker-container03");
+        datePicker("datepicker-input04","datepicker-container04");
 
         //기간
         datePickerTo("startpicker-input", "startpicker-container", "endpicker-input", "endpicker-container");
@@ -390,6 +398,7 @@
             datePicker("datepicker-input01","datepicker-container01");
             datePicker("datepicker-input02","datepicker-container02");
             datePicker("datepicker-input03","datepicker-container03");
+            datePicker("datepicker-input04","datepicker-container04");
             datePickerTo("startpicker-input", "startpicker-container", "endpicker-input", "endpicker-container");
             datePickerTo("startpicker-input02", "startpicker-container02", "endpicker-input02", "endpicker-container02");
         },1000);

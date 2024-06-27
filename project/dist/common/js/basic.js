@@ -43,6 +43,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
         });
     })
+
+    //아코디언 20240627 추가
+    const accordions = document.querySelectorAll(".modAccordion .accoArea");
+    accordions.forEach(function(accodian,idx){
+        accodian.querySelector(".accoTop").addEventListener("click", function(event){
+            accodian.classList.toggle("on");
+        });
+    });
+    
 });
 
 // ------------------------------- 팝업 함수 ------------------------------- //

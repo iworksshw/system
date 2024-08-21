@@ -54,6 +54,35 @@ document.addEventListener("DOMContentLoaded", function () {
     
 });
 
+// ------------------------------- 탭메뉴 함수 ------------------------------- //
+//모드 탭 함수
+function tabMenuInit(){
+    //모드탭의 수
+    const modTabs = document.querySelectorAll(".modTab");
+    modTabs.forEach(function(modTab,tabIdx,elements){
+        const tabmenus = modTab.querySelectorAll(".item");
+        const tabConts = modTab.querySelectorAll(".tabCont");
+
+        //모드탭 내의 메뉴 수
+        tabmenus.forEach(function(tabmenu,menuIdx,inElements){
+            tabmenu.addEventListener("click", function(event){
+                inElements.forEach(function(inElement){
+                    inElement.classList.remove("on");
+                    inElement.setAttribute("title", "탭메뉴");
+                });
+                this.classList.add("on");
+                this.setAttribute("title", "선택 된 탭메뉴");
+                tabConts.forEach(function(tabCont,contIdx){
+                    tabCont.classList.remove("on");
+                    if(menuIdx == contIdx){
+                        tabCont.classList.add("on");
+                    }
+                })
+            });
+        });
+    });
+}
+
 // ------------------------------- 팝업 함수 ------------------------------- //
 //팝업 열기
 function openPopup($popName){

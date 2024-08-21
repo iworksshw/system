@@ -188,6 +188,20 @@
 .modPopup .comSmTit.type05 .title {font-size:16px;}
 .modPopup .comSmTit.type05 {margin-top:10px;}
 
+/*작은타이틀 타입 구분*/
+.comSmTit.type02 {border-bottom:2px solid #5a7eff; margin-bottom:20px; padding-bottom:4px; box-sizing:border-box; align-items:baseline;}
+.comSmTit.type02 .alignL .title {font-weight:bold;}
+.comSmTit.type02 span.subTitle {font-size:14px; color:#000; margin-left:5px; display:inline-block;}
+.comSmTit.type02 .alignR button {margin-top:-9px;}
+
+.comSmTit.type03 {margin-bottom:8px;}
+.comSmTit.type03 .title {font-size:14px; font-weight:bold !important;}
+
+.comSmTit.type04 .title {font-size:16px;}
+.comSmTit .sqDot {display:inline-block; vertical-align:middle; background:var(--basic-purple); width:5px; height:5px; margin-right:5px;}
+
+.comSmTit.type05 .title {font-size:16px;}
+.comSmTit.type05 {margin-top:10px;}
 
 
 /* ---------------------------------------------- 아코디언 ---------------------------------------------- */
@@ -314,23 +328,35 @@
 .cptGrid .gridTb thead tr:first-child th:first-child {border-radius:10px 0 0 0;}
 .cptGrid .gridTb thead tr:first-child th:last-child {border-radius:0 10px 0 0;}
 .cptGrid .gridTb thead th:last-child {padding-right:20px;}
-.cptGrid .gridTb tbody td {padding:5px 5px; height:48px; font-size:14px; font-weight:400; color:#333; text-align:center; line-height:1.6; border-bottom:1px solid #ddd; background:#fff; position:relative;}
+.cptGrid .gridTb tbody td {padding:5px 5px; height:48px; font-size:14px; font-weight:400; color:#333; text-align:center; line-height:1.6; border-top:1px solid #ddd; background:#fff; position:relative;}
 .cptGrid .gridTb tbody td a.boardLink {display:block; width:100%;}
 .cptGrid .gridTb tbody td a.boardLink > span:first-of-type {text-decoration:underline;}
 .cptGrid .gridTb tbody td:first-child {padding-left:20px;}
 .cptGrid .gridTb tbody td:first-child::after {content:""; width:20px; height:1px; background:#fff; display:block; position:absolute; left:0; bottom:-1px;}
 .cptGrid .gridTb tbody td:last-child {padding-right:20px;}
 .cptGrid .gridTb tbody td:last-child::after {content:""; width:20px; height:1px; background:#fff; display:block; position:absolute; right:0; bottom:-1px;}
-.cptGrid .gridTb tbody tr:last-child td {border-bottom:0;}
+.cptGrid .gridTb tbody tr:first-child td {border-bottom:0;}
 .cptGrid .gridTb tbody tr:last-child td:first-child {border-radius:0 0 0 10px;}
 .cptGrid .gridTb tbody tr:last-child td:first-child::after {display:none;}
 .cptGrid .gridTb tbody tr:last-child td:last-child {border-radius:0 0 10px 0;}
 .cptGrid .gridTb tbody tr:last-child td:last-child::after {display:none;}
+.cptGrid .gridTb tfoot td {padding:5px 5px; height:48px; font-size:14px; font-weight:400; color:#333; text-align:center; line-height:1.6; border-top:1px solid #ddd; background:#dadffd; position:relative;}
+.cptGrid .gridTb tfoot td a.boardLink {display:block; width:100%;}
+.cptGrid .gridTb tfoot td a.boardLink > span:first-of-type {text-decoration:underline;}
+.cptGrid .gridTb tfoot td:first-child {padding-left:20px;}
+.cptGrid .gridTb tfoot td:first-child::after {content:""; width:20px; height:1px; background:#fff; display:block; position:absolute; left:0; bottom:-1px;}
+.cptGrid .gridTb tfoot td:last-child {padding-right:20px;}
+.cptGrid .gridTb tfoot td:last-child::after {content:""; width:20px; height:1px; background:#fff; display:block; position:absolute; right:0; bottom:-1px;}
+.cptGrid .gridTb tfoot tr:last-child td {border-bottom:0;}
+.cptGrid .gridTb tfoot tr:last-child td:first-child {border-radius:0 0 0 10px;}
+.cptGrid .gridTb tfoot tr:last-child td:first-child::after {display:none;}
+.cptGrid .gridTb tfoot tr:last-child td:last-child {border-radius:0 0 10px 0;}
+.cptGrid .gridTb tfoot tr:last-child td:last-child::after {display:none;}
 .cptGrid .gridTb tr span.txtBlue {color:var(--basic-color);}
 .cptGrid .gridTb tr span.txtRed {color:var(--basic-red);}
 .cptGrid .gridTb .thum {width:100%;}
-.txtBlue {color:var(--basic-color);}
-.txtRed {color:var(--basic-red);}
+.txtBlue {color:var(--basic-color) !important;}
+.txtRed {color:var(--basic-red) !important;}
 /* 그리드 내부 폼 */
 .cptGrid .frmChoBox.only {width:20px; height:20px; margin:0 auto; display:block; position:relative;}
 .cptGrid .frmChoBox.only .iptChk + .iptLbl {height: 20px; margin: 0; padding-left: 20px;}
@@ -348,6 +374,8 @@
 .cptGrid .gridTb tr .bottom {vertical-align:bottom;}
 .cptGrid .gridTb tr .fMid {font-weight:500;}
 .cptGrid .gridTb tr .bold {font-weight:bold;}
+.cptGrid .gridTb tr .noLast:last-child {padding: 5px;}
+.cptGrid .gridTb tr .noLast:last-child::after {display: none;}
 .cptGrid td span.newBtn {display:inline-block; vertical-align:middle; margin:6px 0 0 5px;}
 
 
@@ -1719,3 +1747,41 @@ select {width:100%; height:30px; padding-left:25px; font-size:14px; color:#333; 
 /* ---------------------------------------- 예외 ---------------------------------------- */
 .cptTable + .cptTable {margin-top:20px;}
 .cptTable + .cptGrid {margin-top:30px;}
+
+
+
+
+
+
+
+
+/* ------------------------------------------------------------------------------------------ */
+/* ---------------------------------------- 테마 iwms ---------------------------------------- */
+/* ------------------------------------------------------------------------------------------ */
+
+/* ---------------------------- 테이블 :: iwms ---------------------------- */
+.cptTable .required {color: var(--basic-red);}
+
+/* ---------------------------- 그리드 :: iwms ---------------------------- */
+.iwms .cptGrid {overflow: auto; position: relative;}
+.iwms .cptGrid:last-child {margin-bottom: 0;}
+.iwms .cptGrid .gridTb {border-collapse: separate;}
+.iwms .cptGrid .gridTb th {border-radius: 0 !important;}
+.iwms .cptGrid .gridTb th {border-left: 1px solid #666;}
+.iwms .cptGrid .gridTb th:first-child {border-left: 0; padding: 5px;}
+.iwms .cptGrid .gridTb th:last-child {padding: 5px;}
+.iwms .cptGrid .gridTb td {border-radius: 0 !important;}
+.iwms .cptGrid .gridTb tbody td {border-left: 1px solid #ddd;}
+.iwms .cptGrid .gridTb tfoot td {border-left: 1px solid #fff;}
+.iwms .cptGrid .gridTb td:first-child {border-left: 0; padding: 5px;}
+.iwms .cptGrid .gridTb td:last-child {padding: 5px;}
+.iwms .cptGrid .gridTb thead {position: sticky; left: 0; top: 0; z-index: 2;}
+.iwms .cptGrid .gridTb thead tr:nth-child(n + 2) th {border-top: 1px solid #666;}
+.iwms .cptGrid .gridTb tbody td:first-child::after {display: none;}
+.iwms .cptGrid .gridTb tbody td:last-child::after {display: none;}
+.iwms .cptGrid::-webkit-scrollbar {width:6px; height:6px; border-radius: 3px; background: rgba(0, 0, 0, 0.20);}
+.iwms .cptGrid::-webkit-scrollbar-thumb {width:6px; height:6px; border-radius: 3px; background: rgba(0, 0, 0, 0.20);}
+
+/* 그리드 추가조작 */
+.iwms .cptGrid .gridTb tr th.line {border-left: 1px solid #666;}
+.iwms .cptGrid .gridTb tr td.line {border-left: 1px solid #ddd;}

@@ -751,6 +751,26 @@ textArea.areaMd {height:150px;}
 .frmChoBtn .iptRdo + .iptLbl {width:100px; height:30px; font-size:14px; text-align:center; color:#fff; line-height:26px; border-radius:3px; border:1px solid #444; background:#666;}
 .frmChoBtn .iptRdo:checked + .iptLbl {border:1px solid #2784ff; background:#319af6;}
 
+/* 검색 버튼식 체크박스/라디오 박스 */
+.cptSearchArea {
+    .frmChoBtn {margin-right: -1px; display:flex; 
+        &.start {
+            &:first-child {margin-left: 0;}
+            margin-left: 5px;
+            .iptChk + .iptLblBtn {border-radius: 3px 0 0 3px;}
+            .iptRdo + .iptLblBtn {border-radius: 3px 0 0 3px;}
+        }
+        &.end {
+            .iptChk + .iptLblBtn {border-radius: 0 3px 3px 0;}
+            .iptRdo + .iptLblBtn {border-radius: 0 3px 3px 0;}
+        }
+    }
+    .frmChoBtn .iptChk + .iptLblBtn {min-width:60px; height:30px; padding: 0 5px; font-size:14px; text-align:center; color:#2a2d3e; line-height:26px; border:1px solid #9fa0a0; background:#fff;}
+    .frmChoBtn .iptChk:checked + .iptLblBtn {color: #fff; border:1px solid #2784ff; background:#319af6;}
+    .frmChoBtn .iptRdo + .iptLblBtn {min-width:60px; height:30px; padding: 0 5px; font-size:14px; text-align:center; color:#2a2d3e; line-height:26px; border:1px solid #9fa0a0; background:#fff;}
+    .frmChoBtn .iptRdo:checked + .iptLblBtn {color: #fff; border:1px solid #2784ff; background:#319af6;}
+}
+
 
 /* ------------------------------ 한줄 안에 여러폼을 넣어야 할 경우 ------------------------------ */
 .frmGroup {display:flex; align-items:center;}

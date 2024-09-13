@@ -427,6 +427,10 @@
         border: 0;
         color: #333
         */
+        &:disabled {
+            color: #777;
+            background: #efefef url(../images/icon/ic_textfield_calendar.svg) right 10px center no-repeat !important;
+        }
     }
     
     .tui-datepicker-input > .tui-ico-date {

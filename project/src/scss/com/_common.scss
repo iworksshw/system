@@ -467,12 +467,12 @@
 .cptTable .tbWrite td {height:42px; padding:6px 10px; font-size:14px; font-weight:500; color:#000; border-bottom:1px solid rgba(132, 132, 132, 0.2);}
 
 .cptTable .tbView {width:100%;}
-.cptTable .tbView thead th {height:42px; font-size:14px; font-weight:500; color:#000; border-left:1px solid rgba(132, 132, 132, 0.2); border-bottom:1px solid rgba(132, 132, 132, 0.2); background:#f5f5f5;}
-.cptTable .tbView thead th:first-child {border-left:0;}
-.cptTable .tbView tbody th {height:42px; padding:10px 10px; font-size:14px; font-weight:500; color:#000; border-left:1px solid rgba(132, 132, 132, 0.2); line-height:20px; border-bottom:1px solid rgba(132, 132, 132, 0.2); background:#f5f5f5;}
-.cptTable .tbView tbody th:first-child {border-left:0;}
-.cptTable .tbView td {height:42px; padding:6px 10px; font-size:14px; font-weight:400; color:#000; border-left:1px solid rgba(132, 132, 132, 0.2); border-bottom:1px solid rgba(132, 132, 132, 0.2);}
-.cptTable .tbView td:first-child {border-left:0;}
+.cptTable .tbView thead th {height:42px; font-size:14px; font-weight:500; color:#000; border-right:1px solid rgba(132, 132, 132, 0.2); border-bottom:1px solid rgba(132, 132, 132, 0.2); background:#f5f5f5;}
+.cptTable .tbView thead th:last-child {border-right:0;}
+.cptTable .tbView tbody th {height:42px; padding:10px 10px; font-size:14px; font-weight:500; color:#000; border-right:1px solid rgba(132, 132, 132, 0.2); line-height:20px; border-bottom:1px solid rgba(132, 132, 132, 0.2); background:#f5f5f5;}
+.cptTable .tbView tbody th:last-child {border-right:0;}
+.cptTable .tbView td {height:42px; padding:6px 10px; font-size:14px; font-weight:400; color:#000; border-right:1px solid rgba(132, 132, 132, 0.2); border-bottom:1px solid rgba(132, 132, 132, 0.2);}
+.cptTable .tbView td:last-child {border-right:0;}
 .cptTable .tbView td.noList {border-bottom:0; height:60px;}
 
 .cptTable .required {margin-left:2px; color:var(--basic-color);}
@@ -491,6 +491,7 @@
 .cptTable table tr span.txtBlue {color:var(--basic-color);}
 .cptTable table tr span.txtRed {color:var(--basic-red);}
 .cptTable table tr .bdl {border-left:1px solid rgba(132, 132, 132, 0.2) !important; }
+.cptTable table tr .bdr {border-right:1px solid rgba(132, 132, 132, 0.2) !important; }
 .cptTable table tr td .fitPercent {color:var(--basic-color);}
 .cptTable table tr td input:disabled {background:#f5f5f5; border:1px solid #eaeaea;}
 .cptTable table tr td .gradeTxt {color:var(--basic-color)}
@@ -504,6 +505,31 @@
 .cptTable .outText .red {color:var(--basic-red);}
 .cptTable .outText:first-child {margin-top:0;}
 .cptTable .outText:last-child {margin-bottom:0;}
+
+/* View/Hide */
+.cptTable .hideBox {
+    height: 35px; line-height:34px; display: inline-flex; align-items: center;
+    .hideBtn {
+        width: 19px; height:19px; margin-right:3px; font-size:0; border: 1px solid #bbb; background: #fff; position: relative;
+        &.plus {
+            &::before {
+                content: ""; width: 11px; height: 1px; background: #bbb; display: block; position: absolute; left: 3px; top:8px;
+            }
+            &::after {
+                content: ""; width: 1px; height: 11px; background: #bbb; display: block; position: absolute; left: 8px; top:3px;
+            }
+        }
+        &.minus {
+            &::before {
+                content: ""; width: 11px; height: 1px; background: #bbb; display: block; position: absolute; left: 3px; top:8px;
+            }
+        }
+    }
+    .empty {
+        width: 7px; height:7px; margin-left: 10px; margin-right:5px; font-size:0; border: 1px solid #bbb; background: #bbb; position: relative;
+    }
+}
+
 
 .cptTable .inTable {width:100%; margin-top:10px; border:1px solid #ccc; border-radius:5px; overflow:hidden; background:#fff;}
 .cptTable .inTable:first-child {margin-top:0;}

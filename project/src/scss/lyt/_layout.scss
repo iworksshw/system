@@ -6,6 +6,9 @@
 /* ------------------------------------------------------------------------------------------------------ */
 
 .wrap {min-width:1600px;}
+.wrap.winpop {
+    min-width: auto; padding: 20px;
+}
 
 /* 레이아웃 : type 01 */
 .lytLayout {width:100%; min-width:1600px;}

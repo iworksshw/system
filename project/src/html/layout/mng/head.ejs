@@ -2,6 +2,7 @@
 var url = locals.url ? locals.url : '../../';
 var color = locals.color ? locals.color : '';
 var theme = locals.theme ? locals.theme : '';
+var winpop = locals.winpop ? locals.winpop : ''; 
 %>
 
 <!doctype html>
@@ -39,4 +40,4 @@ var theme = locals.theme ? locals.theme : '';
 </head>
 <body>
 <div class="skip"><a class="quickBtn" href="#container">본문바로가기</a></div>
-<div class="wrap">
+<div class="wrap <%= winpop %>">

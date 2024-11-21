@@ -590,6 +590,8 @@
 .modPopup.on .popupDim {opacity:0; animation: popOpenDimd 0.2s linear forwards;}
 @keyframes popOpenDimd { 0% {opacity:0;} 100% {opacity:1;} }
 
+.modPopup.light .popupDim{width:100%; height:100%; font-size:0; background:rgba(0,0,0,0.5); position:fixed; left:0; top:0;} //연한 딤팝업
+
 .modPopup .popupArea {width:100%; max-width:1500px; height:auto; max-height: calc(100% - 60px);}
 .modPopup.sm .popupArea {max-width:580px;}
 .modPopup.md .popupArea {max-width:910px;}

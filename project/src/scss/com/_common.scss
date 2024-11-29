@@ -1757,13 +1757,16 @@ select {width:100%; height:30px; padding-left:25px; font-size:14px; color:#333; 
 
 
 /* ---------------------------------------- 텍스트 박스 ---------------------------------------- */
-.cptInfoBox {width: 100%; margin:10px 0; padding: 20px; box-sizing: border-box; background: #f1f7fa;}
+.cptInfoBox {width: 100%; margin:10px 0; padding: 20px; box-sizing: border-box; border: 1px solid #e1e5ef; border-radius: 10px; background: #fff;}
 .cptInfoBox:first-child {margin-top:0;}
 .cptInfoBox:last-child {margin-bottom:0;}
 .cptInfoBox p {font-size: 14px; color: #000;}
 .cptInfoBox p.tSm {font-size: 12px; color: #000;}
+.cptInfoBox p.tMd {font-size: 14px; color: #000;}
 .cptInfoBox p.tLg {font-size: 16px; color: #000;}
 .cptInfoBox p.center {text-align:center;}
+
+.modPopup .cptInfoBox {border: 0; border-radius: 0; background: #f1f7fa;}
 
 /* ---------------------------------------- 미리보기 ㅇ ---------------------------------------- */
 .comPreview {margin-top:30px;}

@@ -65,12 +65,12 @@ function tableRowFirst (){
         tableAll.forEach(function(tableGrid,tableGrIdx){
             const tableRows = tableGrid.querySelectorAll("tbody tr td:first-child[rowspan]");
             tableRows.forEach(function(tableRow,idx){
-                console.log(tableRow.rowSpan);
-                console.log(tableRow.parentNode.rowIndex);
-                const trIdx = tableRow.parentNode.rowIndex; //rowspan tr index
-                const rowspanNum = tableRow.rowSpan;        //rowspan number
+                //console.log(tableRow.rowSpan);
+                console.log(tableRow.parentNode.sectionRowIndex);
+                const trIdx = tableRow.parentNode.sectionRowIndex;  //rowspan tr index
+                const rowspanNum = tableRow.rowSpan;                //rowspan number
                 for(i=1;i<rowspanNum;i++) {
-                    tableGrid.querySelector("tr:nth-child("+(trIdx+i)+") td:first-child").classList.add("noFirst");
+                    tableGrid.querySelector("tbody tr:nth-child("+(trIdx+i+1)+") td:first-child").classList.add("noFirst");
                 }
             });
         });

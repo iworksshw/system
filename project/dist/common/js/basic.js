@@ -51,8 +51,32 @@ document.addEventListener("DOMContentLoaded", function () {
             accodian.classList.toggle("on");
         });
     });
-    
+
+   //rowspan 일때 하위 테이블 first-child 부분 class수정
+    tableRowFirst ();
 });
+
+// ------------------------------- 테이블 함수 ------------------------------- //
+//rowspan 일때 하위 테이블 first-child 부분 class수정
+function tableRowFirst (){
+    const tableAll = document.querySelectorAll(".cptGrid");
+    
+    if(tableAll){
+        tableAll.forEach(function(tableGrid,tableGrIdx){
+            const tableRows = tableGrid.querySelectorAll("tbody tr td:first-child[rowspan]");
+            tableRows.forEach(function(tableRow,idx){
+                console.log(tableRow.rowSpan);
+                console.log(tableRow.parentNode.rowIndex);
+                const trIdx = tableRow.parentNode.rowIndex; //rowspan tr index
+                const rowspanNum = tableRow.rowSpan;        //rowspan number
+                for(i=1;i<rowspanNum;i++) {
+                    tableGrid.querySelector("tr:nth-child("+(trIdx+i)+") td:first-child").classList.add("noFirst");
+                }
+            });
+        });
+    }
+}
+
 
 // ------------------------------- 탭메뉴 함수 ------------------------------- //
 //모드 탭 함수

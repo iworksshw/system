@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>error</title>
+</head>
+<body>
+    
+<style>
+
+/* 본고딕 Light */
+@font-face {
+  font-family: "NotoSans";
+  font-style: normal;
+  font-weight: 300;
+  src: url("../../common/webfont/NotoSansKR-Light.woff2") format("woff2");
+}
+/* 본고딕 Regular */
+@font-face {
+  font-family: "NotoSans";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../../common/webfont/NotoSansKR-Regular.woff2") format("woff2");
+}
+/* 본고딕 Medium */
+@font-face {
+  font-family: "NotoSans";
+  font-style: normal;
+  font-weight: 500;
+  src: url("../../common/webfont/NotoSansKR-Medium.woff2") format("woff2");
+}
+/* 본고딕 Bold */
+@font-face {
+  font-family: "NotoSans";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../../common/webfont/NotoSansKR-Bold.woff2") format("woff2");
+}
+
+/* Montserrat Light */
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 300;
+  src: url("../../common/webfont/Montserrat-Light.woff2") format("woff2");
+}
+
+/* Montserrat Regular */
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../../common/webfont/Montserrat-Regular.woff2") format("woff2");
+}
+
+
+/* Montserrat Regular */
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  src: url("../../common/webfont/Montserrat-Medium.woff2") format("woff2");
+}
+
+/* Montserrat Bold */
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../../common/webfont/Montserrat-Bold.woff2") format("woff2");
+}
+
+* {
+  margin: 0;  padding: 0;  -webkit-text-size-adjust: none;  word-break: break-all; letter-spacing: -0.6px;
+}
+
+*, *::before, *::after {
+  -webkit-moz-box-sizing: border-box;  -ms-moz-box-sizing: border-box;  -o-moz-box-sizing: border-box;  box-sizing: border-box;
+}
+
+html, body, div, span, object, iframe, font, h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub,
+sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, article, aside, canvas, details,
+figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video {
+  margin: 0;  padding: 0;  border: 0;  outline: 0;  font-size: 100%;  vertical-align: baseline;  background: transparent;
+}
+
+table {
+  border-collapse: collapse;  border-spacing: 0; table-layout: fixed;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+nav, ul, ol, dl {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after {
+  content: '';
+  content: none;
+}
+
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+a {
+  margin: 0;  padding: 0;  font-size: 100%;  word-break: break-all;  vertical-align: baseline;  background: transparent;
+}
+
+ins {
+  background-color: #ff9;  color: #000;  text-decoration: none;
+}
+
+mark {
+  background-color: #ff9;  color: #000;  font-style: italic;  font-weight: bold;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+  text-decoration: none;  border-bottom: medium none;  cursor: default;
+}
+
+hr {
+  display: block;  height: 1px;  border: 0;  border-top: 1px solid #cccccc;  margin: 1em 0;  padding: 0;
+}
+
+legend, caption {
+  display: none;  clear: both;
+}
+
+label {
+  cursor: pointer;
+}
+
+button {
+  margin: 0;  font: inherit;  color: inherit;  vertical-align: middle;  cursor: pointer;
+}
+
+input {
+  margin: 0;  font: inherit;  color: inherit;  vertical-align: middle;
+}
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  padding: 0;  border: 0;
+}
+
+input[type="text"] {
+  font-family: "Montserrat", "NotoSans";  font-size: 14px; color: #333;
+}
+
+input[type="text"],input[type="password"],input[type="tel"],input[type="email"],input[type="date"],input[type="number"] {
+  background: #fff;  border: 1px solid #d9d9d9;  -webkit-border-radius: 0;  -webkit-appearance: none;
+}
+
+input[type="button"],input[type="reset"],input[type="submit"] {
+  cursor: pointer;  -webkit-border-radius: 0;  -webkit-appearance: none;
+}
+
+input[type="checkbox"] {
+  width: 18px;  height: 18px;  padding: 0;
+}
+input[type="radio"] {
+  width: 15px;  height: 15px;  padding: 0;
+}
+
+input::placeholder {color: #ccc;}
+input::-webkit-input-placeholder {color: #ccc;}
+input:-ms-input-placeholder {color: #ccc;}
+
+textarea {
+  margin: 0;  resize: none;  font: inherit;  color: inherit;  width: 100%;  border: 1px solid #ddd;  
+  padding: 10px;  background: url(none);  -webkit-border-radius: 1px;  -webkit-appearance: none;
+}
+
+select {
+  margin: 0;  font: inherit;  color: inherit;  vertical-align: middle;  background: #fff url(../images/common/icon_select.png) calc(100% - 20px) center no-repeat;
+  -webkit-border-radius: 0;  border: 1px solid #d0d0d0; -webkit-appearance: none; -moz-appearance:none; appearance:none;
+}
+select::-ms-expand {display:none}
+.select {width:100%; margin-left:7px; padding-left:25px; color:#333; font-size:16px;}
+.select:first-child {margin-left:0;}
+
+optgroup {
+  font: inherit;  color: inherit;  margin: 0;
+}
+
+
+
+img {
+  vertical-align: top;
+  transform:translateZ(0); /*20230403 이미지 정상 랜더링 전용 css 추가*/
+}
+
+a:link {
+  text-decoration: none;  color: #333;
+}
+a:visited, a:hover, a:active {
+  color: #333;  text-decoration: none;
+}
+
+address, em {
+  font-style: normal;
+}
+
+/* blind */
+.blind {
+  overflow: hidden;  position: absolute;  top: 0;  left: 0;  width: 0;  height: 0;  font-size: 0;  line-height: 0;
+}
+
+/* skipnavi */
+#skipnavi {
+  position: fixed;  left: 0;  top: 0;  width: 100%;  margin-left: 0;  z-index: 99999;
+}
+#skipnavi a {
+  position: absolute;  left: -99999px;
+}
+
+#skipnavi a:focus, #skipnavi a:active {
+  position: relative;  left: 0;  z-index: 9999;  width: 100%;  padding: 10px;  text-decoration: none;
+}
+
+/* html 설정 */
+html {
+  font-family: "Montserrat", "NotoSans";  font-size: 12px;  color: #333;
+}
+.skip .quickBtn {display: block; width: 100%; height: 0px;background: #092473; font-size: 15px; color: #fff; overflow: hidden; text-align: center;}
+.skip .quickBtn:focus {height:auto;}
+
+/* error */
+html {height: 100%;}
+body {height: 100%;}
+.cptError {
+    width: 100%; height: 100%; display: flex; align-items: center;
+    .errorArea {
+        width:100%; min-width:1600px; padding: 0 20px; margin:0 auto; display: flex; justify-content: center; flex-wrap: wrap;
+        .errorName {
+            color: #757575; text-align: center; font-family: "Montserrat"; font-size: 100px; font-style: normal; font-weight: 300; line-height: 70px;
+        }
+        .errorBox {
+            width: 100%; margin-top: 28px;
+            .errorTitle{
+                h2{
+                    color: #000; font-family: "Noto Sans CJK KR"; text-align: center; font-size: 32px; font-style: normal; font-weight: 400; line-height: 150%;
+                }
+            }
+            .errorMsg{
+                margin-top: 20px; color: #000; text-align: center; font-size: 16px; font-style: normal; font-weight: 300; line-height: 150%;
+            }
+        }
+        .btnArea {
+            width: 100%; margin-top: 40px; display: flex; justify-content: center; gap: 5px;
+            a.btn {
+                width: max-content; height: 34px; padding: 0 20px; font-size: 14px; font-weight: 400; border-radius: 4px; line-height: 32px; display: flex; align-items: center;
+                &.basic {color: #ffffff; border: 1px solid #5565D2; background: #5565D2;}
+                &.dark {color: #ffffff; border: 1px solid #262836; background: #262836;}
+            }
+        }
+    }
+}
+
+</style>
+
+<div class="cptError">
+    <div class="errorArea">
+        <h1 class="errorName">404</h1>
+        <dl class="errorBox error404">
+            <dt class="errorTitle">
+                <h2>페이지를 찾을 수 없습니다.</h2>
+            </dt>
+            <dd class="errorMsg">
+                <p>
+                    페이지가 존재하지 않거나, 사용할 수 없는 페이지입니다.<br>
+                    입력하신 주소가 정확한지 다시 한번 확인해 주세요.
+                </p>
+            </dd>
+        </dl>
+        <div class="btnArea">
+            <a href="#" class="btn basic">이전 페이지</a>
+            <a href="#" class="btn dark">홈으로 이동</a>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

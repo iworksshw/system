@@ -710,6 +710,7 @@ select.iptSlt {font-size:14px;}
 .fileBox .fileAfter .limit200 {width:180px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;}
 .fileBox.on .fileBefore {display:none;}
 .fileBox.on .fileAfter {display:flex;}
+.fileBox:has(.uploadBtn[disabled]) label.gridBtn {color: #aaa; background: #efefef; border: 1px solid #aaa;}
 
 /*파일박스 추가조작*/
 .excInfo {display:flex; justify-content:start; align-items:center; margin-top:5px;}
@@ -764,9 +765,14 @@ textArea.areaMd {height:150px;}
 .frmChoList.col2 .frmChoBox {width:16.666%;}
 .frmChoList.vertical {padding-top:5px;}
 .frmChoList.vertical .frmChoBox {width:100%;}
+
 /* 텍스트 없는 체크박스/라디오 */
 .frmChoBox.only .iptChk + .iptLbl {height:30px; margin:0; padding-left:20px;}
 .frmChoBox.only .iptRdo + .iptLbl {height:30px; margin:0; padding-left:20px;}
+
+/* 텍스트 없는 체크박스/라디오 */
+.frmChoBox.reverse .iptChk + .iptLbl {padding-left:0; padding-right:22px; background-position: right center;}
+.frmChoBox.reverse .iptRdo + .iptLbl {padding-left:0; padding-right:22px; background-position: right center;}
 
 /*일반 체크 및 라디오 박스 여백 좁힘*/
 .frmChoBox.type02 {margin-right:10px;}

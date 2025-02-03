@@ -1,0 +1,3222 @@
+@charset "UTF-8";
+:root {
+	--key-blue01:#00aede;
+	--key-text01:#00aede;
+	---Primary:#078B7B;
+	---Point2:#A7FFEF;
+	--Point-Orange: #F97B07;
+	--Point-Blue:#0EA3F6;
+	--Point-Blue2:#2E6CFF;
+	--Point-Primary2: #28C39E;
+	--Point-Primary3: #1F4F82;
+	--Point-Red: #f33;
+	---Secondary: #254962;
+	--Gray-900:#111111;
+	--Gray-800:#2C2C2C;
+	--Gray-700:#414347;
+	--Gray-600:#58595F;
+	--Gray-500:#6F7176;
+	--Gray-400:#92959A;
+	--Gray-300:#B0B2B7;
+	--Gray-200:#CED1D6;
+	--Gray-150:#EDEDED;
+	--Gray-50:#FBFBFB;
+	--Bg-Line-line-100: #E1E4EA;
+	--Bg-Line-line-200: #EDEDED;
+	--Bg-Line-line-300: #EDF0F5;
+	--Bg-Line-white: #ffffff;
+	--Bg-Line-bg-50:#FBFBFB;
+	--Bg-Line-bg-100: #F9FAFC;
+	--Bg-Line-bg-200: #F3F5F8;
+	--Bg-Line-bg-300: #EDF0F5;
+	--gray-gray-40: #C6C6C6;
+	--system-danger-50: #EB003B;
+	--zone-blue: #548CE0;
+	--zone-pink: #F45990;
+	--zone-green: #2EB273;
+	---Secondary: #254962;
+}
+
+/* ------------------- Font Color ------------------- */
+.tKey {
+	color: var(---Primary) !important;
+}
+
+.tRed {
+	color: var(--Point-Red) !important;
+}
+
+.tOrange {
+	color: var(--Point-Orange) !important;
+}
+
+.tBlue {
+	color: var(--Point-Blue) !important;
+}
+
+.tBlue2 {
+	color: var(--Point-Blue2) !important;
+}
+
+.tMint {
+	color: var(--Point-Primary2) !important;
+}
+
+.tZoneGreen {
+	color: var(--zone-green) !important;
+}
+
+.tZonePink {
+	color: var(--zone-pink) !important;
+}
+
+.tZoneBlue {
+	color: var(--zone-blue) !important;
+}
+
+/* ------------------- Font Weight ------------------- */
+.tBold {
+	font-weight: 600 !important;
+}
+
+.tEBold {
+	font-weight: 700 !important;
+}
+
+
+.lytFront * {
+	box-sizing: border-box;
+}
+.lytFront a {
+	color: #000; text-decoration: none;
+}
+.lytFront h1,
+.lytFront h2,
+.lytFront h3,
+.lytFront h4,
+.lytFront h5,
+.lytFront h6 {margin:0;}
+.lytFront button {border:0 none;background-color:transparent;cursor:pointer}
+.lytFront ul, .lytFront li {
+	padding: 0; margin: 0; list-style-type: none;
+}
+.lytFront input[type=checkbox] {
+	width: 1px;
+    height: 1px;
+    font-size: 0;
+    opacity: 0.01;
+    overflow: hidden;
+}
+.lytFront caption {
+    font-size: 0;
+}
+/* ----- 폼 그룹 ----- */
+.frmGroup {
+	margin-top: 12px;
+	display: flex;
+	align-items: flex-start;
+	gap: 12px;
+}
+.frmGroup:first-child {
+	margin-top: 0;
+}
+.frmGroup.full {
+	flex-wrap: wrap;
+}
+.frmGroup.gap40 {
+	gap: 40px;
+}
+.frmGroup.error .iptText, .frmGroup .error .iptText {
+	padding-left: 16px;
+	border: 1px solid var(--system-danger-50);
+}
+.frmGroup.error .errMsg, .frmGroup .error .errMsg {
+	display: block;
+}
+.frmGroup .errMsg {
+	width: 100%;
+	margin-top: 12px;
+	padding-left: 24px;
+	color: var(--system-danger-50);
+	font-size: 15px;
+	font-weight: 400;
+	line-height: 1.5;
+	background: url(../images/ic_20_danger.svg) left 0 no-repeat;
+	display: none;
+}
+.frmGroup .errMsg.line {
+	margin-left: 5px;
+	margin-top: 0;
+	height: 48px;
+	align-content: center;
+}
+.frmGroup .errMsg.line:first-child {
+	margin-left: 0;
+}
+.frmGroup .errMsg.inline {
+	width: auto;
+	display: none;
+	background: none;
+	padding-left: 0;
+	margin-top: 0;
+	align-self: center;
+}
+.frmGroup .helpMsg {
+	margin-top: 12px;
+	color: var(--Gray-600, #58595F);
+	font-size: 15px;
+	font-weight: 400;
+	line-height: 150%; /* 22.5px */
+}
+.frmGroup .textBox {
+	margin-left: 5px;
+	height: 48px;
+	align-content: center;
+}
+@media screen and (max-width: 767px) {
+	.frmGroup.email {
+		flex-wrap: wrap;
+	}
+	.frmGroup.email .frmBox:nth-child(1), .frmGroup.email .frmBox:nth-child(2) {
+		width: calc(50% - 6px);
+		min-width: none;
+	}
+	.frmGroup.email .frmBox:nth-child(3) {
+		width: 100%;
+		min-width: none;
+	}
+}
+
+
+.cptDateSelect {
+	margin-top: 60px;
+}
+.cptDateSelect:first-child {
+	margin-top: 0;
+}
+.cptDateSelect .selectBox {
+	padding: 32px 40px;
+	border-radius: 12px;
+	border: 1px solid var(--Bg-Line-line-200);
+	background: var(--Bg-Line-bg-100);
+	display: flex;
+	column-gap: 50px;
+	position: relative;
+}
+.cptDateSelect .selectBox .frmGroup {
+	flex: 1 0 auto;
+}
+.cptDateSelect .selectBox .frmGroup select {
+	background-color: transparent;
+}
+.cptDateSelect .selectBox .calendarBtn {
+	width: 48px;
+	height: 48px;
+	border-radius: 50%;
+	font-size: 0;
+	background: var(---Primary) url(../images/ic_24_calendar.svg) center no-repeat;
+	flex: 0 0 48px;
+}
+.cptDateSelect .selectBox .layerPopup {
+	max-width: 360px;
+	border-radius: 20px;
+	overflow: hidden;
+	background: #fff;
+	position: absolute;
+	right: 20px;
+	top: 90px;
+	box-shadow: 2px 4px 30px 0px rgba(0, 0, 0, 0.1);
+	z-index: 9;
+	display: none;
+}
+.cptDateSelect .selectBox .layerPopup.on {
+	display: block;
+}
+.cptDateSelect .selectBox .layerPopup .popHead {
+	padding: 16px 32px;
+	background: var(--Point-Primary2);
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.cptDateSelect .selectBox .layerPopup .popHead h3 {
+	font-size: 20px;
+	color: #fff;
+	font-weight: 700;
+	line-height: 1.4;
+}
+.cptDateSelect .selectBox .layerPopup .popHead .popClose {
+	width: 24px;
+	height: 24px;
+	font-size: 0;
+	background: url(../images/ic_24_close_white.svg) center no-repeat;
+}
+.cptDateSelect .selectBox .layerPopup .popCont .dateSetting {
+	padding: 10px 24px;
+	border-bottom: 1px solid var(--Gray-200);
+	display: flex;
+	column-gap: 8px;
+	align-items: center;
+}
+.cptDateSelect .selectBox .layerPopup .popCont .dateSetting .btnGroup {
+	display: flex;
+	align-items: center;
+	column-gap: 4px;
+}
+.cptDateSelect .selectBox .layerPopup .popCont .dateSetting .btnGroup .setBtn {
+	width: 36px;
+	height: 36px;
+	border-radius: 6px;
+	border: 1px solid var(--Bg-Line-line-100);
+	font-size: 0;
+	background: url(../images/ic_12_arr_fill_g.svg) center no-repeat;
+}
+.cptDateSelect .selectBox .layerPopup .popCont .dateSetting .btnGroup .setBtn.first {
+	background-image: url(../images/ic_12_dbArr_fill_g.svg);
+}
+.cptDateSelect .selectBox .layerPopup .popCont .dateSetting .btnGroup .setBtn.next {
+	transform: rotate(180deg);
+}
+.cptDateSelect .selectBox .layerPopup .popCont .dateSetting .btnGroup .setBtn.last {
+	background-image: url(../images/ic_12_dbArr_fill_g.svg);
+	transform: rotate(180deg);
+}
+.cptDateSelect .selectBox .layerPopup .popCont .dateSetting .date span {
+	padding: 0 8px;
+	font-size: 18px;
+	color: var(--Gray-900);
+	display: inline-block;
+	vertical-align: middle;
+}
+@media screen and (max-width: 767px) {
+	.cptDateSelect {
+		margin-top: 20px;
+	}
+	.cptDateSelect .selectBox {
+		padding: 0;
+		border: none;
+		background: none;
+		gap: 16px 15px;
+		position: relative;
+	}
+	.cptDateSelect .selectBox .frmGroup {
+		flex: 1 0 100%;
+		flex-wrap: wrap;
+	}
+	.cptDateSelect .selectBox .frmGroup .frmBox:last-child {
+		width: calc(100% - 63px);
+	}
+	.cptDateSelect .selectBox .calendarBtn {
+		position: absolute;
+		bottom: 0;
+		right: 0;
+	}
+	.cptDateSelect .selectBox .layerPopup {
+		right: 0;
+		top: 120px;
+		z-index: 15;
+	}
+	.cptDateSelect .selectBox .layerPopup .popHead {
+		padding: 16px 20px;
+	}
+	.cptDateSelect .selectBox .layerPopup .popHead h3 {
+		font-size: 18px;
+		font-weight: 600;
+		line-height: 1.3;
+	}
+	.cptDateSelect .selectBox .layerPopup .popCont .dateSetting {
+		padding: 10px 20px;
+		justify-content: center;
+	}
+	.cptDateSelect .selectBox .layerPopup .popCont .dateSetting .date {
+		text-align: center;
+	}
+	.cptDateSelect .selectBox .layerPopup .popCont .dateSetting .date span {
+		font-size: 16px;
+	}
+}
+
+
+.cptLinkSection {
+	width: 100%;
+	margin-top: 60px;
+	padding-bottom: 60px;
+	border-bottom: 10px solid #f4f6fa;
+}
+.cptLinkSection:first-child {
+	margin-top: 0;
+}
+.cptLinkSection:last-child {
+	padding-bottom: 0;
+	border-bottom: none;
+}
+@media screen and (max-width: 767px) {
+	.cptLinkSection {
+		margin-top: 40px;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.comTitH2 {
+	margin-top: 40px;
+	display: flex;
+	align-items: center;
+}
+.comTitH2:first-child {
+	margin-top: 0;
+}
+.comTitH2.mgH60 {
+	margin-top: 60px;
+}
+.comTitH2.mgH80 {
+	margin-top: 80px;
+}
+.comTitH2 h2 {
+	margin: 0;
+	font-size: 1.5rem;
+	color: var(---Primary);
+	font-weight: 700;
+	line-height: 1.4;
+	word-break: keep-all;
+}
+.comTitH2 .etcAdds {
+	margin: 0;
+	margin-left: 16px;
+	font-size: 18px;
+	color: var(--Gray-800);
+	align-self: flex-end;
+}
+.comTitH2 .rightTxt {
+	margin-left: 20px;
+	font-size: 16px;
+	font-weight: 300;
+	line-height: 1.5;
+	color: var(--Gray-600);
+}
+.comTitH2 .right {
+	margin-left: auto;
+}
+.comTitH2 .right .frmBox {
+	width: 160px;
+	max-width: 160px;
+}
+.comTitH2 .right .frmBox .iptSlt {
+	height: 36px;
+	font-size: 14px;
+	background-position: right 16px center;
+}
+.comTitH2 .right .txtBtn {
+	padding-right: 16px;
+	text-align: right;
+	font-size: 14px;
+	color: var(--Gray-600);
+	background: url(../images/ic_12_arr_right_g.svg) right center no-repeat;
+}
+.comTitH2.bk h2 {
+	color: var(--Grey-900);
+}
+.comTitH2.lg {
+	margin-bottom: 20px;
+}
+.comTitH2.lg h2 {
+	font-size: 1.875rem;
+	font-weight: 300;
+}
+.comTitH2.lg ~ .comImgBox, .comTitH2.lg ~ .comFomulBox {
+	margin-top: 20px;
+}
+@media screen and (max-width: 767px) {
+	.comTitH2.lg {
+		margin-bottom: 12px;
+	}
+	.comTitH2.lg h2 {
+		font-size: 1.375rem;
+	}
+}
+@media screen and (max-width: 767px) {
+	.comTitH2 {
+		margin-top: 24px;
+	}
+	.comTitH2.mgH60 {
+		margin-top: 40px;
+	}
+	.comTitH2.mgH80 {
+		margin-top: 60px;
+	}
+	.comTitH2 h2 {
+		font-size: 20px;
+	}
+	.comTitH2 .etcAdds {
+		font-size: 16px;
+	}
+	.comTitH2 .right .frmBox {
+		width: 120px;
+		max-width: 120px;
+	}
+	.comTitH2 .right .frmBox .iptSlt {
+		padding: 0 12px;
+		border-radius: 6px;
+		font-size: 14px;
+		background-size: 14px;
+		background-position: right 12px center;
+	}
+	.comTitH2 .rightTxt {
+		font-size: 15px;
+		margin-left: 12px;
+	}
+	.comTitH2.mRow {
+		width: 100%;
+		flex-wrap: wrap;
+	}
+	.comTitH2.mRow h2 {
+		width: 100%;
+	}
+	.comTitH2.mRow .right {
+		width: 100%;
+		margin-top: 24px;
+	}
+	.comTitH2.mRow .right .frmBox {
+		width: 100%;
+		max-width: none;
+	}
+	.comTitH2.mRow .etcAdds {
+		margin-left: 0;
+	}
+}
+
+.comTitH3 {
+	margin-top: 32px;
+	display: flex;
+	align-items: center;
+}
+.comTitH3:first-child {
+	margin-top: 0;
+}
+.comTitH3 h3 {
+	padding-left: 18px;
+	font-size: 18px;
+	color: var(--Gray-900);
+	font-weight: 700;
+	line-height: 1.4;
+	background: url(../images/bullet_h3.svg) left 7px no-repeat;
+	word-break: keep-all;
+}
+.comTitH3 h3.metro {
+	height: 26px;
+	padding-left: 54px;
+	background: url(../images/cont08_04_03_01_metro7.svg) left center no-repeat;
+	background-size: 38px;
+}
+.comTitH3.mgH {
+	margin-top: 24px;
+}
+.comTitH3.mgH20 {
+	margin-top: 20px;
+}
+.comTitH3.mgH40 {
+	margin-top: 40px;
+}
+.comTitH3 .right {
+	margin-left: auto;
+}
+.comTitH3 .right .addTxt {
+	padding-left: 20px;
+	font-size: 14px;
+	color: var(--Gray-600);
+	background: url(../images/ic_16_info.svg) left 2px no-repeat;
+}
+.comTitH3 .right .addTxt b {
+	font-weight: 500;
+	color: var(--Gray-800);
+}
+.comTitH3 .right .txtBtn {
+	padding-right: 16px;
+	text-align: right;
+	font-size: 14px;
+	color: var(--Gray-600);
+	background: url(../images/ic_12_arr_right_g.svg) right center no-repeat;
+}
+.comTitH3 .right .legendList {
+	display: flex;
+	justify-content: flex-end;
+	column-gap: 16px;
+}
+.comTitH3 .right .legendList .lgItem .legend {
+	width: 16px;
+	height: 16px;
+	border-radius: 4px;
+	line-height: 17px;
+	text-align: center;
+	font-size: 0.6875rem;
+	color: #fff;
+	font-weight: 700;
+	display: inline-block;
+}
+.comTitH3 .right .legendList .lgItem .legend.type01 {
+	background: #2c77bc;
+}
+.comTitH3 .right .legendList .lgItem .legend.type02 {
+	background: #34ADA8;
+}
+.comTitH3 .right .legendList .lgItem .legend.type03 {
+	background: #92BA2B;
+}
+.comTitH3 .right .legendList .lgItem .legend.type04 {
+	background: #F07E3F;
+}
+.comTitH3 .right .legendList .lgItem .txt {
+	font-size: 14px;
+	font-weight: 500;
+	color: var(--Gray-700);
+	display: inline-block;
+}
+.comTitH3 .right .frmBox {
+	width: 160px;
+	max-width: 160px;
+}
+.comTitH3 .right .frmBox .iptSlt {
+	height: 36px;
+	font-size: 14px;
+	background-position: right 16px center;
+}
+.comTitH3 + .comFormTable {
+	margin-top: 20px;
+}
+.comTitH3 + .comFormTable .tableArea {
+	border-top: 1px solid var(--Bg-Line-line-100);
+}
+@media screen and (max-width: 767px) {
+	.comTitH3 {
+		margin-top: 24px;
+	}
+	.comTitH3 h3 {
+		font-size: 16px;
+		background-position: left 5px;
+	}
+	.comTitH3 h3.metro {
+		height: 23px;
+		padding-left: 44px;
+		background-size: 30px;
+	}
+	.comTitH3.mgH, .comTitH3.mgH40 {
+		margin-top: 24px;
+	}
+	.comTitH3 .right .addTxt {
+		font-size: 13px;
+	}
+	.comTitH3 .right .frmBox {
+		width: 120px;
+		max-width: 120px;
+	}
+	.comTitH3 .right .frmBox .iptSlt {
+		padding: 0 12px;
+		border-radius: 6px;
+		font-size: 14px;
+		background-size: 14px;
+		background-position: right 12px center;
+	}
+	.comTitH3.mRow {
+		width: 100%;
+		flex-wrap: wrap;
+	}
+	.comTitH3.mRow .right {
+		width: 100%;
+		margin-top: 24px;
+	}
+	.comTitH3.mRow .right .frmBox {
+		width: 100%;
+		max-width: none;
+	}
+	.comTitH3.mRow .etcAdds {
+		margin-left: 0;
+	}
+	.comTitH3 + .comFormTable {
+		margin-top: 16px;
+		margin-left: -16px;
+		width: calc(100% + 32px);
+	}
+	.comTitH3 + .comFormTable .tableArea {
+		padding: 0 16px;
+	}
+}
+
+.comTitH2 + .comTitH3 {
+	margin-top: 20px;
+}
+
+.comTitH2 + .comTitH3.mgH40 {
+	margin-top: 40px;
+}
+@media screen and (max-width: 767px) {
+	.comTitH2 + .comTitH3.mgH40 {
+		margin-top: 24px;
+	}
+}
+
+.comDataTable + .comTitH3 {
+	margin-top: 40px;
+}
+
+.comBasicTxt {
+	margin-top: 12px;
+}
+.comBasicTxt:first-child {
+	margin-top: 0;
+}
+.comBasicTxt.mgH20 {
+	margin-top: 20px;
+}
+.comBasicTxt.mgH32 {
+	margin-top: 32px;
+}
+.comBasicTxt .txt {
+	margin-top: 8px;
+	font-size: 16px;
+	line-height: 1.6;
+	color: var(--Gray-800);
+	word-break: keep-all;
+}
+.comBasicTxt .txt em {
+	font-weight: 700;
+}
+.comBasicTxt .txt:first-child {
+	margin-top: 0;
+}
+.comBasicTxt .txtBold {
+	margin-top: 8px;
+	font-size: 18px;
+	font-weight: 700;
+	line-height: 1.6;
+	color: var(--Gray-800);
+	word-break: keep-all;
+}
+.comBasicTxt .txtBold:first-child {
+	margin-top: 0;
+}
+.comBasicTxt.space {
+	padding-left: 18px;
+}
+@media screen and (max-width: 767px) {
+	.comBasicTxt.space {
+		padding-left: 0;
+	}
+}
+.comImgBox + .comBasicTxt, .comFomulBox + .comBasicTxt {
+	margin-top: 32px;
+}
+@media screen and (max-width: 767px) {
+	.comBasicTxt {
+		margin-top: 8px;
+	}
+	.comBasicTxt.mgH20 {
+		margin-top: 16px;
+	}
+	.comBasicTxt.mgH32 {
+		margin-top: 20px;
+	}
+	.comBasicTxt .txt {
+		margin-top: 4px;
+		font-size: 15px;
+	}
+	.comBasicTxt .txtBold {
+		margin-top: 4px;
+		font-size: 16px;
+	}
+	.comImgBox + .comBasicTxt, .comFomulBox + .comBasicTxt {
+		margin-top: 24px;
+	}
+}
+
+.comBasicList, .comJoinBtmText, .comNumList .listGroup .item .addList, .cptEtcInfo .infoBox .info dd .infoList, .cptDescList .thumList .thumItem .descArea dd, .cptImgGuideBox .boxArea .viewArea .dotList {
+	margin-top: 12px;
+}
+.comBasicList:first-child, .comJoinBtmText:first-child, .comNumList .listGroup .item .addList:first-child, .cptEtcInfo .infoBox .info dd .infoList:first-child, .cptDescList .thumList .thumItem .descArea dd:first-child, .cptImgGuideBox .boxArea .viewArea .dotList:first-child {
+	margin-top: 0;
+}
+.comBasicList .item, .comJoinBtmText .item, .comNumList .listGroup .item .addList .item, .cptEtcInfo .infoBox .info dd .infoList .item, .cptDescList .thumList .thumItem .descArea dd .item, .cptImgGuideBox .boxArea .viewArea .dotList .item {
+	margin-top: 8px;
+	padding-left: 11px;
+	font-size: 16px;
+	color: var(--Gray-800);
+	text-align: left;
+	position: relative;
+	word-break: keep-all;
+}
+.comBasicList .item em, .comJoinBtmText .item em, .comNumList .listGroup .item .addList .item em, .cptEtcInfo .infoBox .info dd .infoList .item em, .cptDescList .thumList .thumItem .descArea dd .item em, .cptImgGuideBox .boxArea .viewArea .dotList .item em {
+	font-weight: 600;
+}
+.comBasicList .item:first-child, .comJoinBtmText .item:first-child, .comNumList .listGroup .item .addList .item:first-child, .cptEtcInfo .infoBox .info dd .infoList .item:first-child, .cptDescList .thumList .thumItem .descArea dd .item:first-child, .cptImgGuideBox .boxArea .viewArea .dotList .item:first-child {
+	margin-top: 0;
+}
+.comBasicList .item::after, .comJoinBtmText .item::after, .comNumList .listGroup .item .addList .item::after, .cptEtcInfo .infoBox .info dd .infoList .item::after, .cptDescList .thumList .thumItem .descArea dd .item::after, .cptImgGuideBox .boxArea .viewArea .dotList .item::after {
+	display: block;
+	content: "";
+	width: 3px;
+	height: 3px;
+	background: var(--Gray-400);
+	position: absolute;
+	left: 0;
+	top: 10px;
+}
+.comBasicList .item .sTit, .comJoinBtmText .item .sTit, .comNumList .listGroup .item .addList .item .sTit, .cptEtcInfo .infoBox .info dd .infoList .item .sTit, .cptDescList .thumList .thumItem .descArea dd .item .sTit, .cptImgGuideBox .boxArea .viewArea .dotList .item .sTit {
+	font-weight: 700;
+	display: block;
+}
+.comBasicList .item .sTxt, .comJoinBtmText .item .sTxt, .comNumList .listGroup .item .addList .item .sTxt, .cptEtcInfo .infoBox .info dd .infoList .item .sTxt, .cptDescList .thumList .thumItem .descArea dd .item .sTxt, .cptImgGuideBox .boxArea .viewArea .dotList .item .sTxt {
+	font-style: normal;
+}
+.comBasicList .item .lineTit, .comJoinBtmText .item .lineTit, .comNumList .listGroup .item .addList .item .lineTit, .cptEtcInfo .infoBox .info dd .infoList .item .lineTit, .cptDescList .thumList .thumItem .descArea dd .item .lineTit, .cptImgGuideBox .boxArea .viewArea .dotList .item .lineTit {
+	font-weight: 700;
+	display: inline;
+}
+.comBasicList .item .lineTxt, .comJoinBtmText .item .lineTxt, .comNumList .listGroup .item .addList .item .lineTxt, .cptEtcInfo .infoBox .info dd .infoList .item .lineTxt, .cptDescList .thumList .thumItem .descArea dd .item .lineTxt, .cptImgGuideBox .boxArea .viewArea .dotList .item .lineTxt {
+	font-style: normal;
+	display: inline;
+}
+.comBasicList .item .addGuide, .comJoinBtmText .item .addGuide, .comNumList .listGroup .item .addList .item .addGuide, .cptEtcInfo .infoBox .info dd .infoList .item .addGuide, .cptDescList .thumList .thumItem .descArea dd .item .addGuide, .cptImgGuideBox .boxArea .viewArea .dotList .item .addGuide {
+	margin-top: 8px !important;
+}
+.comBasicList .orderList, .comJoinBtmText .orderList, .comNumList .listGroup .item .addList .orderList, .cptEtcInfo .infoBox .info dd .infoList .orderList, .cptDescList .thumList .thumItem .descArea dd .orderList, .cptImgGuideBox .boxArea .viewArea .dotList .orderList {
+	padding-left: 20px;
+	margin-top: 8px;
+}
+.comBasicList .orderList .numItem, .comJoinBtmText .orderList .numItem, .comNumList .listGroup .item .addList .orderList .numItem, .cptEtcInfo .infoBox .info dd .infoList .orderList .numItem, .cptDescList .thumList .thumItem .descArea dd .orderList .numItem, .cptImgGuideBox .boxArea .viewArea .dotList .orderList .numItem {
+	margin-top: 4px;
+	font-size: 16px;
+	color: var(--Gray-800);
+	line-height: 1.6;
+}
+.comBasicList .orderList .numItem:first-child, .comJoinBtmText .orderList .numItem:first-child, .comNumList .listGroup .item .addList .orderList .numItem:first-child, .cptEtcInfo .infoBox .info dd .infoList .orderList .numItem:first-child, .cptDescList .thumList .thumItem .descArea dd .orderList .numItem:first-child, .cptImgGuideBox .boxArea .viewArea .dotList .orderList .numItem:first-child {
+	margin-top: 0;
+}
+.comBasicList.space, .space.comJoinBtmText, .comNumList .listGroup .item .space.addList, .cptEtcInfo .infoBox .info dd .space.infoList, .cptDescList .thumList .thumItem .descArea dd.space, .cptImgGuideBox .boxArea .viewArea .space.dotList {
+	padding-left: 7px;
+}
+.comBasicList.mgH .item, .mgH.comJoinBtmText .item, .comNumList .listGroup .item .mgH.addList .item, .cptEtcInfo .infoBox .info dd .mgH.infoList .item, .cptDescList .thumList .thumItem .descArea dd.mgH .item, .cptImgGuideBox .boxArea .viewArea .mgH.dotList .item {
+	margin-top: 12px;
+}
+.comImgBox + .comBasicList, .comImgBox + .comJoinBtmText, .comFomulBox + .comBasicList, .comFomulBox + .comJoinBtmText, .comNumList .listGroup .item .comImgBox + .addList, .comNumList .listGroup .item .comFomulBox + .addList, .cptEtcInfo .infoBox .info dd .comImgBox + .infoList, .cptEtcInfo .infoBox .info dd .comFomulBox + .infoList, .cptDescList .thumList .thumItem .descArea .comImgBox + dd, .cptDescList .thumList .thumItem .descArea .comFomulBox + dd, .cptImgGuideBox .boxArea .viewArea .comImgBox + .dotList, .cptImgGuideBox .boxArea .viewArea .comFomulBox + .dotList {
+	margin-top: 32px;
+}
+.comBasicList .listGroup.color .item, .comJoinBtmText .listGroup.color .item, .comNumList .listGroup .item .addList .listGroup.color .item, .cptEtcInfo .infoBox .info dd .infoList .listGroup.color .item, .cptDescList .thumList .thumItem .descArea dd .listGroup.color .item, .cptImgGuideBox .boxArea .viewArea .dotList .listGroup.color .item {
+	color: var(--Gray-600, #58595F);
+}
+@media screen and (max-width: 767px) {
+	.comBasicList .item, .comJoinBtmText .item, .comNumList .listGroup .item .addList .item, .cptEtcInfo .infoBox .info dd .infoList .item, .cptDescList .thumList .thumItem .descArea dd .item, .cptImgGuideBox .boxArea .viewArea .dotList .item {
+		font-size: 15px;
+	}
+	.comBasicList .orderList, .comJoinBtmText .orderList, .comNumList .listGroup .item .addList .orderList, .cptEtcInfo .infoBox .info dd .infoList .orderList, .cptDescList .thumList .thumItem .descArea dd .orderList, .cptImgGuideBox .boxArea .viewArea .dotList .orderList {
+		padding-left: 0;
+		margin-top: 8px;
+	}
+	.comBasicList .orderList .numItem, .comJoinBtmText .orderList .numItem, .comNumList .listGroup .item .addList .orderList .numItem, .cptEtcInfo .infoBox .info dd .infoList .orderList .numItem, .cptDescList .thumList .thumItem .descArea dd .orderList .numItem, .cptImgGuideBox .boxArea .viewArea .dotList .orderList .numItem {
+		font-size: 15px;
+	}
+	.comBasicList.space, .space.comJoinBtmText, .comNumList .listGroup .item .space.addList, .cptEtcInfo .infoBox .info dd .space.infoList, .cptDescList .thumList .thumItem .descArea dd.space, .cptImgGuideBox .boxArea .viewArea .space.dotList {
+		padding-left: 0;
+	}
+	.comImgBox + .comBasicList, .comImgBox + .comJoinBtmText, .comFomulBox + .comBasicList, .comFomulBox + .comJoinBtmText, .comNumList .listGroup .item .comImgBox + .addList, .comNumList .listGroup .item .comFomulBox + .addList, .cptEtcInfo .infoBox .info dd .comImgBox + .infoList, .cptEtcInfo .infoBox .info dd .comFomulBox + .infoList, .cptDescList .thumList .thumItem .descArea .comImgBox + dd, .cptDescList .thumList .thumItem .descArea .comFomulBox + dd, .cptImgGuideBox .boxArea .viewArea .comImgBox + .dotList, .cptImgGuideBox .boxArea .viewArea .comFomulBox + .dotList {
+		margin-top: 24px;
+	}
+}
+
+.comBasicTxt + .comBasicList, .comBasicTxt + .comJoinBtmText, .comNumList .listGroup .item .comBasicTxt + .addList, .cptEtcInfo .infoBox .info dd .comBasicTxt + .infoList, .cptDescList .thumList .thumItem .descArea .comBasicTxt + dd, .cptImgGuideBox .boxArea .viewArea .comBasicTxt + .dotList {
+	margin-top: 20px;
+}
+
+
+.comDateSwiper {
+	overflow: hidden;
+}
+.comDateSwiper .dateSwiper {
+	width: 100%;
+	padding: 0 34px;
+	position: relative;
+}
+.comDateSwiper .dateSwiper::before {
+	display: block;
+	content: "";
+	width: 34px;
+	height: 76px;
+	background: #f5f6fa;
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 9;
+}
+.comDateSwiper.sticky.sOn .dateSwiper::before {
+	background: #fff;
+}
+.comDateSwiper .dateSwiper::after {
+	display: block;
+	content: "";
+	width: 34px;
+	height: 76px;
+	background: #f5f6fa;
+	position: absolute;
+	right: 0;
+	top: 0;
+	z-index: 9;
+}
+.comDateSwiper.sticky.sOn .dateSwiper::after {
+	background: #fff;
+}
+.comDateSwiper .dateSwiper .swiper-slide {
+	width: fit-content;
+}
+.comDateSwiper .dateSwiper .swiper-slide .dateBox {
+	width: 56px;
+	height: 56px;
+	border-radius: 50%;
+	padding: 11px 0;
+	text-align: center;
+	transition: all 0.15s;
+}
+.comDateSwiper .dateSwiper .swiper-slide .dateBox > span {
+	display: block;
+	font-size: 14px;
+	color: var(--Gray-800);
+	line-height: 1.25;
+}
+.comDateSwiper .dateSwiper .swiper-slide .dateBox .region {
+	font-weight: 500;
+}
+.comDateSwiper .dateSwiper .swiper-slide .dateBox .date {
+	font-weight: 700;
+}
+.comDateSwiper .dateSwiper .swiper-slide .dateBox:hover.blue {
+	background: #E9F2FF;
+}
+.comDateSwiper .dateSwiper .swiper-slide .dateBox:hover.blue span {
+	color: #2F6FcF;
+}
+.comDateSwiper .dateSwiper .swiper-slide .dateBox:hover.red {
+	background: #FFEFF5;
+}
+.comDateSwiper .dateSwiper .swiper-slide .dateBox:hover.red span {
+	color: #E4417B;
+}
+.comDateSwiper .dateSwiper .swiper-slide .dateBox:hover.green {
+	background: #EAF6F1;
+}
+.comDateSwiper .dateSwiper .swiper-slide .dateBox:hover.green span {
+	color: #1FAE6A;
+}
+.comDateSwiper .dateSwiper .swiper-slide .dateBox.disabled {
+	cursor: default;
+}
+.comDateSwiper .dateSwiper .swiper-slide .dateBox.disabled > span {
+	color: var(--Gray-300);
+}
+.comDateSwiper .dateSwiper .swiper-slide .dateBox.disabled:hover {
+	color: var(--Gray-300);
+	background: none;
+}
+.comDateSwiper .dateSwiper .swiper-slide .dateBox.disabled:hover span {
+	color: var(--Gray-300);
+}
+.comDateSwiper .dateSwiper .swiper-slide .dateBox.on > span {
+	color: #fff;
+}
+.comDateSwiper .dateSwiper .swiper-slide .dateBox.on.blue {
+	background: var(--zone-blue);
+}
+.comDateSwiper .dateSwiper .swiper-slide .dateBox.on.blue span {
+	color: #fff;
+}
+.comDateSwiper .dateSwiper .swiper-slide .dateBox.on.red {
+	background: var(--zone-pink);
+}
+.comDateSwiper .dateSwiper .swiper-slide .dateBox.on.red span {
+	color: #fff;
+}
+.comDateSwiper .dateSwiper .swiper-slide .dateBox.on.green {
+	background: var(--zone-green);
+}
+.comDateSwiper .dateSwiper .swiper-slide .dateBox.on.green span {
+	color: #fff;
+}
+.comDateSwiper .dateSwiper .swiper-button-next {
+	right: 0;
+}
+.comDateSwiper .dateSwiper .swiper-button-next::after {
+	width: 24px;
+	height: 24px;
+	font-size: 0;
+	background: url(../images/ic_20_paging_next.svg) center/20px no-repeat;
+}
+.comDateSwiper .dateSwiper .swiper-button-prev {
+	left: 0;
+}
+.comDateSwiper .dateSwiper .swiper-button-prev::after {
+	width: 24px;
+	height: 24px;
+	font-size: 0;
+	background: url(../images/ic_20_paging_prev.svg) center/20px no-repeat;
+}
+.comDateSwiper.sticky.sOn {
+	height: 64px;
+}
+.comDateSwiper.sticky.sOn .dateSwiper {
+	max-width: 1563px;
+	padding: 10px 34px;
+	background: #fff;
+	position: fixed;
+	top: 0;
+	left: auto;
+	/* transform: translateX(-50%); */
+	z-index: 99;
+	overflow: hidden;
+}
+
+/* --------------------------- 데이터 테이블 --------------------------- */
+.comDataTable {
+	width: 100%;
+	margin-top: 12px;
+	background: #fff;
+}
+.comDataTable:first-child {
+	margin-top: 0;
+}
+.comDataTable .tableArea {
+	width: 100%;
+	border-top: 2px solid var(--Gray-900);
+	overflow: auto;
+}
+.comDataTable .tableArea.sizeS table {
+	min-width: 600px;
+}
+.comDataTable .tableArea.sizeM table {
+	min-width: 800px;
+}
+.comDataTable .tableArea.sizeL table {
+	min-width: 1000px;
+}
+.comDataTable .tableArea.sizeXL table {
+	min-width: 1200px;
+}
+.comDataTable .tableArea table {
+	width: 100%;
+	border-spacing: 0;
+	border-collapse: separate; /*table-layout: fixed;*/
+}
+.comDataTable .tableArea table thead tr th {
+	padding: 20px 5px;
+	color: var(--Gray-900);
+	font-size: 15px;
+	font-weight: 600;
+	line-height: 1.3;
+	border-right: 1px solid var(--Bg-Line-line-200);
+	border-bottom: 1px solid var(--Bg-Line-line-100);
+	background: var(--Bg-Line-bg-100);
+	position: sticky;
+	top: 0;
+}
+.comDataTable .tableArea table thead tr th:last-child {
+	border-right: 0;
+}
+.comDataTable .tableArea table thead tr th.btmLine {
+	border-bottom: 1px solid var(--Gray-900);
+}
+.comDataTable .tableArea table thead tr th .sortIco {
+	position: relative;
+	padding-right: 16px;
+	font-weight: 600;
+	font-size: unset;
+}
+.comDataTable .tableArea table thead tr th .sortIco::before {
+	content: "";
+	position: absolute;
+	top: 50%;
+	right: 0;
+	width: 16px;
+	height: 16px;
+	transform: translateY(-50%);
+	background: url(../images/ic_16_tbl_sort.svg) no-repeat center center;
+}
+.comDataTable .tableArea table thead tr th .sortIco.up::before {
+	transform: translateY(-50%) rotate(180deg) !important;
+}
+.comDataTable .tableArea table thead tr th .sortIco.tRed::before {
+	background: url(../images/ic_16_tbl_sort_red.svg) no-repeat center center;
+}
+.comDataTable .tableArea table thead tr:last-child th {
+	border-bottom: 1px solid var(--Gray-900);
+}
+.comDataTable .tableArea table tbody tr th {
+	padding: 20px 5px;
+	color: var(--Gray-900);
+	font-size: 15px;
+	font-weight: 600;
+	line-height: 1.3;
+	border-right: 1px solid var(--Gray-300);
+	border-bottom: 1px solid var(--Bg-Line-line-100);
+	background: var(--Bg-Line-bg-100);
+}
+.comDataTable .tableArea table tbody tr th:last-child {
+	border-right: 0;
+}
+.comDataTable .tableArea table tbody tr th .txtBtn {
+	text-decoration: underline;
+	text-underline-position: under;
+}
+.comDataTable .tableArea table tbody tr td {
+	padding: 20px 5px;
+	color: var(--Gray-700);
+	text-align: center;
+	font-size: 15px;
+	font-weight: 400;
+	line-height: 1.3;
+	border-right: 1px solid var(--Bg-Line-line-200);
+	border-bottom: 1px solid var(--Bg-Line-line-100);
+}
+.comDataTable .tableArea table tbody tr td:last-child {
+	border-right: 0;
+}
+.comDataTable .tableArea table tbody tr td b {
+	color: var(--Gray-900);
+	font-weight: 600;
+}
+.comDataTable .tableArea table tbody tr td .txtBtn {
+	text-decoration: underline;
+	text-underline-position: under;
+}
+.comDataTable .tableArea table tbody tr:nth-child(2n) td {
+	background: var(--Gray-50);
+}
+.comDataTable .tableArea table tbody tr .left {
+	text-align: left;
+	padding: 20px;
+}
+.comDataTable .tableArea table tbody tr .center {
+	text-align: center;
+}
+.comDataTable .tableArea table tbody tr .right {
+	text-align: right;
+}
+.comDataTable .tableArea table tfoot tr th {
+	padding: 20px 5px;
+	color: var(--Gray-900);
+	font-size: 15px;
+	font-weight: 600;
+	line-height: 1.3;
+	border-right: 1px solid var(--Bg-Line-line-200);
+	border-top: 1px solid var(--Gray-900);
+	border-bottom: 1px solid var(--Bg-Line-line-100);
+	background: var(--Bg-Line-bg-100);
+}
+.comDataTable .tableArea table tfoot tr th:last-child {
+	border-right: 0;
+}
+.comDataTable .tableArea table tfoot tr th .txtBtn {
+	text-decoration: underline;
+	text-underline-position: under;
+}
+.comDataTable .tableArea table tfoot tr td {
+	padding: 20px 5px;
+	color: var(--Gray-700);
+	text-align: center;
+	font-size: 15px;
+	font-weight: 400;
+	line-height: 1.3;
+	border-right: 1px solid var(--Bg-Line-line-200);
+	border-top: 1px solid var(--Gray-900);
+	border-bottom: 1px solid var(--Bg-Line-line-100);
+}
+.comDataTable .tableArea table tfoot tr td:last-child {
+	border-right: 0;
+}
+.comDataTable .tableArea table tfoot tr td b {
+	color: var(--Gray-900);
+	font-weight: 600;
+}
+.comDataTable .tableArea table tfoot tr td .txtBtn {
+	text-decoration: underline;
+	text-underline-position: under;
+}
+.comDataTable .tableArea .tbGreen {
+	background: #ECF8F6 !important;
+}
+.comDataTable .tableArea .tbBlue {
+	background: #ECF1F8;
+}
+.comDataTable .tableArea .tbRed {
+	background: #F6ECF8;
+}
+.comDataTable .tableArea .tbYellow {
+	background: rgba(245, 242, 221, 0.2705882353);
+}
+.comDataTable .tableArea .tbGray {
+	background: #EDF4F8;
+}
+.comDataTable .tableArea .bdrBold {
+	border-right: 1px solid var(--Gray-300) !important;
+}
+.comDataTable .tableArea .bdbBold {
+	border-bottom: 1px solid var(--Gray-300) !important;
+}
+.comDataTable.colLineDel .tableArea.player01 table tbody th {
+	color: var(--font-700);
+	background: #F1FCFB;
+}
+.comDataTable.colLineDel .tableArea.player02 table tbody th {
+	color: var(--font-900);
+	background: #FBFBFB;
+}
+.comDataTable.colLineDel .tableArea.player03 {
+	border-top: 2px solid #FF2828;
+}
+.comDataTable.colLineDel .tableArea.player03 table tbody th {
+	color: #FF2828;
+	background: #FFF9F9;
+}
+.comDataTable.colLineDel .tableArea.player04 {
+	border-top: 2px solid #2A7DDF;
+}
+.comDataTable.colLineDel .tableArea.player04 table tbody th {
+	color: #2A7DDF;
+	background: #F9FAFF;
+}
+.comDataTable.colLineDel .tableArea.player05 {
+	border-top: 2px solid #FFB907;
+}
+.comDataTable.colLineDel .tableArea.player05 table tbody th {
+	color: #FF9533;
+	background: #FFFCF9;
+}
+.comDataTable.colLineDel .tableArea.player06 {
+	border-top: 2px solid #55B965;
+}
+.comDataTable.colLineDel .tableArea.player06 table tbody th {
+	color: #55B965;
+	background: #F9FFFA;
+}
+.comDataTable.colLineDel .tableArea.player07 {
+	border-top: 2px solid #FF66AF;
+}
+.comDataTable.colLineDel .tableArea.player07 table tbody th {
+	color: #FF66AF;
+	background: #FFF9FC;
+}
+.comDataTable.colLineDel .tableArea table thead tr.row1Line th {
+	border-right: 1px solid var(--Gray-300);
+}
+.comDataTable.colLineDel .tableArea table thead tr.row1Line th:last-child {
+	border-right: 0;
+}
+.comDataTable.colLineDel .tableArea table thead tr.row2Line th:nth-child(2n) {
+	border-right: 1px solid var(--Gray-300);
+}
+.comDataTable.colLineDel .tableArea table thead tr.row2Line th:nth-child(2n):last-child {
+	border-right: 0;
+}
+.comDataTable.colLineDel .tableArea table tbody tr td {
+	background: none;
+}
+.comDataTable.colLineDel .tableArea table tbody tr td.empty {
+	background: #F2FFFB;
+}
+.comDataTable.colLineDel .tableArea table tbody tr.row1Line th {
+	border-right: 1px solid var(--Gray-300);
+}
+.comDataTable.colLineDel .tableArea table tbody tr.row1Line th:last-child {
+	border-right: 0;
+}
+.comDataTable.colLineDel .tableArea table tbody tr.row1Line td {
+	border-right: 1px solid var(--Gray-300);
+}
+.comDataTable.colLineDel .tableArea table tbody tr.row1Line td:last-child {
+	border-right: 0;
+}
+.comDataTable.colLineDel .tableArea table tbody tr.row2Line th {
+	border-right: 1px solid var(--Bg-Line-line-200);
+}
+.comDataTable.colLineDel .tableArea table tbody tr.row2Line th:nth-child(2n) {
+	border-right: 1px solid var(--Gray-300);
+}
+.comDataTable.colLineDel .tableArea table tbody tr.row2Line th:nth-child(2n):last-child {
+	border-right: 0;
+}
+.comDataTable.colLineDel .tableArea table tbody tr.row2Line td:nth-child(2n) {
+	border-right: 1px solid var(--Gray-300);
+}
+.comDataTable.colLineDel .tableArea table tbody tr.row2Line td:nth-child(2n):last-child {
+	border-right: 0;
+}
+.comDataTable.both .tableArea table thead tr th:first-child {
+	border-right: 1px solid var(--Gray-300);
+	z-index: 10;
+	left: 0;
+}
+.comDataTable.both .tableArea table thead tr th.noStand {
+	border-right: 1px solid var(--Bg-Line-line-200);
+	left: auto;
+	z-index: 0;
+}
+.comDataTable.both .tableArea table tbody tr th {
+	border-right: 1px solid var(--Gray-300);
+	position: sticky;
+	left: 0;
+	z-index: 5;
+}
+.comDataTable.row .tableArea table tbody tr th {
+	border-right: 1px solid var(--Gray-900);
+	position: sticky;
+	left: 0;
+	z-index: 5;
+}
+.comDataTable.noSticky .tableArea table tbody tr th {
+	position: static;
+}
+@media screen and (max-width: 767px) {
+	.comDataTable .tableArea {
+		width: calc(100% + 32px);
+		margin-left: -16px;
+	}
+	.comDataTable .tableArea table thead tr th {
+		padding: 10px 5px;
+		font-size: 14px;
+	}
+	.comDataTable .tableArea table tbody tr th {
+		padding: 10px 5px;
+		font-size: 14px;
+	}
+	.comDataTable .tableArea table tbody tr th .txtBtn {
+		font-size: 14px;
+	}
+	.comDataTable .tableArea table tbody tr td {
+		padding: 10px 5px;
+		font-size: 14px;
+	}
+	.comDataTable .tableArea table tbody tr td .txtBtn {
+		font-size: 14px;
+	}
+}
+.comDataTable .profile {
+	width: max-content;
+	display: inline-flex;
+}
+.comDataTable .profile .img {
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	overflow: hidden;
+	flex-shrink: 0;
+	background: #fff;
+	display: flex;
+	justify-content: center;
+}
+.comDataTable .profile .img img {
+	height: 40px;
+}
+.comDataTable .profile .info {
+	margin-left: 8px;
+	display: block;
+}
+.comDataTable .profile .info .name {
+	justify-content: flex-start;
+}
+.comDataTable .profile .info .other {
+	margin-top: 4px;
+	display: flex;
+	white-space: nowrap;
+}
+.comDataTable .pinkLine {
+	padding: 0 2px;
+	font-size: 14px;
+	font-weight: 600;
+	line-height: 1.3;
+	display: inline-block;
+	position: relative;
+	z-index: 1;
+}
+.comDataTable .pinkLine::before {
+	content: "";
+	width: 100%;
+	height: 50%;
+	background: #FFD9DE;
+	display: block;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	z-index: -1;
+}
+.comDataTable .mark {
+	width: 68px;
+	height: 30px;
+	padding: 6px 12px;
+	font-size: 15px;
+	font-weight: 600;
+	line-height: 1.2;
+	white-space: nowrap;
+	border-radius: 20px;
+	background: #FFF;
+	display: inline-block;
+}
+.comDataTable .mark.blue {
+	color: var(--zone-blue);
+	border: 1px solid var(--zone-blue);
+}
+.comDataTable .mark.pink {
+	color: var(--zone-pink);
+	border: 1px solid var(--zone-pink);
+}
+.comDataTable .mark.green {
+	color: var(--zone-green);
+	border: 1px solid var(--zone-green);
+}
+.comDataTable .sign {
+	width: 16px;
+	height: 16px;
+	font-size: 0.6875rem;
+	font-weight: 700;
+	line-height: 1.5;
+	border-radius: 50%;
+	display: inline-block;
+}
+.comDataTable .sign.num01 {
+	color: var(--Gray-300);
+	border: 1px solid var(--Gray-200);
+	background: #FFF;
+}
+.comDataTable .sign.num02 {
+	color: #fff;
+	border: 1px solid #111111;
+	background: #111111;
+}
+.comDataTable .sign.num03 {
+	color: #fff;
+	border: 1px solid #FF2828;
+	background: #FF2828;
+}
+.comDataTable .sign.num04 {
+	color: #fff;
+	border: 1px solid #2A7DDF;
+	background: #2A7DDF;
+}
+.comDataTable .sign.num05 {
+	color: #fff;
+	border: 1px solid #FFB907;
+	background: #FFB907;
+}
+.comDataTable .sign.num06 {
+	color: #fff;
+	border: 1px solid #55B965;
+	background: #55B965;
+}
+.comDataTable .sign.num07 {
+	color: #fff;
+	border: 1px solid #FF66AF;
+	background: #FF66AF;
+}
+.comDataTable .name {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.comDataTable .player {
+	margin-left: 4px;
+	font-size: 15px;
+	color: var(--font-800);
+	font-weight: 600;
+	line-height: 1.4;
+	white-space: nowrap;
+	display: inline-block;
+}
+.comDataTable .player[href] {
+	line-height: 18px;
+	border-bottom: 1px solid var(--Gray-300);
+}
+.comDataTable .zone.green {
+	color: var(--zone-green);
+	font-weight: 600;
+}
+.comDataTable .zone.pink {
+	color: var(--zone-pink);
+	font-weight: 600;
+}
+.comDataTable .zone.blue {
+	color: var(--zone-blue);
+	font-weight: 600;
+}
+.comDataTable .rating.bold {
+	font-weight: 600;
+}
+.comDataTable .rating.mint {
+	color: var(--Point-Primary2);
+	font-weight: 600;
+}
+.comDataTable .rating.blue {
+	color: var(--Point-Blue);
+	font-weight: 600;
+}
+.comDataTable .rating.orange {
+	color: var(--Point-Orange);
+	font-weight: 600;
+}
+.comDataTable .rating.red {
+	color: #f00;
+	font-weight: 600;
+}
+.comDataTable .legend {
+	width: 16px;
+	height: 16px;
+	margin-bottom: 1px;
+	color: #fff;
+	font-size: 0.6875rem;
+	font-weight: 700;
+	line-height: 16px;
+	border-radius: 4px;
+	vertical-align: middle;
+	display: inline-block;
+}
+.comDataTable .legend.type01 {
+	background: #2C77BC;
+}
+.comDataTable .legend.type02 {
+	background: #34ADA8;
+}
+.comDataTable .legend.type03 {
+	background: #F07E3F;
+}
+.comDataTable .legend.type04 {
+	background: #92BA2B;
+}
+
+
+
+/* --------------------------- 하단 버튼 그룹 --------------------------- */
+.comBtnGroup, .comGroupTop .btnList, .comTitH2 .right .btnList {
+	width: 100%;
+	margin-top: 40px;
+	display: flex;
+	justify-content: space-between;
+}
+.comBtnGroup:first-child, .comGroupTop .btnList:first-child, .comTitH2 .right .btnList:first-child {
+	margin-top: 0;
+}
+.comBtnGroup .alignL, .comGroupTop .btnList .alignL, .comTitH2 .right .btnList .alignL {
+	width: 100%;
+	display: flex;
+	justify-content: flex-start;
+}
+.comBtnGroup .alignC, .comGroupTop .btnList .alignC, .comTitH2 .right .btnList .alignC {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+.comBtnGroup .alignR, .comGroupTop .btnList .alignR, .comTitH2 .right .btnList .alignR {
+	width: 100%;
+	display: flex;
+	justify-content: flex-end;
+}
+.comBtnGroup .btnBox, .comGroupTop .btnList .btnBox, .comTitH2 .right .btnList .btnBox {
+	display: flex;
+	gap: 12px;
+}
+@media screen and (max-width: 767px) {
+	.comBtnGroup, .comGroupTop .btnList, .comTitH2 .right .btnList {
+		flex-wrap: wrap;
+		gap: 12px;
+	}
+	.comBtnGroup .btnBox, .comGroupTop .btnList .btnBox, .comTitH2 .right .btnList .btnBox {
+		width: 100%;
+		display: flex;
+		flex-wrap: wrap;
+		gap: 12px;
+	}
+	.comBtnGroup .btnBox .btn, .comGroupTop .btnList .btnBox .btn, .comTitH2 .right .btnList .btnBox .btn {
+		width: 100%;
+	}
+	.comBtnGroup .btnBox.reverse, .comGroupTop .btnList .btnBox.reverse, .comTitH2 .right .btnList .btnBox.reverse {
+		flex-direction: column-reverse;
+	}
+	.comBtnGroup .btnBox.min, .comGroupTop .btnList .btnBox.min, .comTitH2 .right .btnList .btnBox.min {
+		justify-content: center;
+	}
+	.comBtnGroup .btnBox.min .btn, .comGroupTop .btnList .btnBox.min .btn, .comTitH2 .right .btnList .btnBox.min .btn {
+		width: max-content;
+	}
+	.comBtnGroup .btnBox.m30, .comGroupTop .btnList .btnBox.m30, .comTitH2 .right .btnList .btnBox.m30 {
+		flex-wrap: nowrap;
+	}
+	.comBtnGroup .btnBox.m30 .btn:first-child, .comGroupTop .btnList .btnBox.m30 .btn:first-child, .comTitH2 .right .btnList .btnBox.m30 .btn:first-child {
+		width: 30%;
+		min-width: 30%;
+	}
+	.comBtnGroup .btnBox.m50, .comGroupTop .btnList .btnBox.m50, .comTitH2 .right .btnList .btnBox.m50 {
+		flex-wrap: nowrap;
+		flex-direction: row;
+	}
+	.comBtnGroup .btnBox.m50 .btn, .comGroupTop .btnList .btnBox.m50 .btn, .comTitH2 .right .btnList .btnBox.m50 .btn {
+		width: calc(50% - 6px);
+		min-width: calc(50% - 6px);
+	}
+	.comBtnGroup .btnBox.m50.reverse, .comGroupTop .btnList .btnBox.m50.reverse, .comTitH2 .right .btnList .btnBox.m50.reverse {
+		flex-direction: row-reverse;
+	}
+	.comBtnGroup .btnBox.m70, .comGroupTop .btnList .btnBox.m70, .comTitH2 .right .btnList .btnBox.m70 {
+		flex-wrap: nowrap;
+	}
+	.comBtnGroup .btnBox.m70 .btn:last-child, .comGroupTop .btnList .btnBox.m70 .btn:last-child, .comTitH2 .right .btnList .btnBox.m70 .btn:last-child {
+		width: 30%;
+		min-width: 30%;
+	}
+	.comBtnGroup .moR .btnBox.min, .comGroupTop .btnList .moR .btnBox.min, .comTitH2 .right .btnList .moR .btnBox.min {
+		justify-content: flex-end;
+	}
+	.comBtnGroup .moL .btnBox.min, .comGroupTop .btnList .moL .btnBox.min, .comTitH2 .right .btnList .moL .btnBox.min {
+		justify-content: flex-start;
+	}
+}
+.comBtnGroup.section, .comGroupTop .section.btnList, .comTitH2 .right .section.btnList {
+	margin-top: 60px;
+}
+@media screen and (max-width: 767px) {
+	.comBtnGroup.section, .comGroupTop .section.btnList, .comTitH2 .right .section.btnList {
+		margin-top: 40px;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+------------------------- 하단 버튼 그룹 --------------------------- */
+.comBtnGroup, .comGroupTop .btnList, .comTitH2 .right .btnList {
+	width: 100%;
+	margin-top: 40px;
+	display: flex;
+	justify-content: space-between;
+}
+.comBtnGroup:first-child, .comGroupTop .btnList:first-child, .comTitH2 .right .btnList:first-child {
+	margin-top: 0;
+}
+.comBtnGroup .alignL, .comGroupTop .btnList .alignL, .comTitH2 .right .btnList .alignL {
+	width: 100%;
+	display: flex;
+	justify-content: flex-start;
+}
+.comBtnGroup .alignC, .comGroupTop .btnList .alignC, .comTitH2 .right .btnList .alignC {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+.comBtnGroup .alignR, .comGroupTop .btnList .alignR, .comTitH2 .right .btnList .alignR {
+	width: 100%;
+	display: flex;
+	justify-content: flex-end;
+}
+.comBtnGroup .btnBox, .comGroupTop .btnList .btnBox, .comTitH2 .right .btnList .btnBox {
+	display: flex;
+	gap: 12px;
+}
+@media screen and (max-width: 767px) {
+	.comBtnGroup, .comGroupTop .btnList, .comTitH2 .right .btnList {
+		flex-wrap: wrap;
+		gap: 12px;
+	}
+	.comBtnGroup .btnBox, .comGroupTop .btnList .btnBox, .comTitH2 .right .btnList .btnBox {
+		width: 100%;
+		display: flex;
+		flex-wrap: wrap;
+		gap: 12px;
+	}
+	.comBtnGroup .btnBox .btn, .comGroupTop .btnList .btnBox .btn, .comTitH2 .right .btnList .btnBox .btn {
+		width: 100%;
+	}
+	.comBtnGroup .btnBox.reverse, .comGroupTop .btnList .btnBox.reverse, .comTitH2 .right .btnList .btnBox.reverse {
+		flex-direction: column-reverse;
+	}
+	.comBtnGroup .btnBox.min, .comGroupTop .btnList .btnBox.min, .comTitH2 .right .btnList .btnBox.min {
+		justify-content: center;
+	}
+	.comBtnGroup .btnBox.min .btn, .comGroupTop .btnList .btnBox.min .btn, .comTitH2 .right .btnList .btnBox.min .btn {
+		width: max-content;
+	}
+	.comBtnGroup .btnBox.m30, .comGroupTop .btnList .btnBox.m30, .comTitH2 .right .btnList .btnBox.m30 {
+		flex-wrap: nowrap;
+	}
+	.comBtnGroup .btnBox.m30 .btn:first-child, .comGroupTop .btnList .btnBox.m30 .btn:first-child, .comTitH2 .right .btnList .btnBox.m30 .btn:first-child {
+		width: 30%;
+		min-width: 30%;
+	}
+	.comBtnGroup .btnBox.m50, .comGroupTop .btnList .btnBox.m50, .comTitH2 .right .btnList .btnBox.m50 {
+		flex-wrap: nowrap;
+		flex-direction: row;
+	}
+	.comBtnGroup .btnBox.m50 .btn, .comGroupTop .btnList .btnBox.m50 .btn, .comTitH2 .right .btnList .btnBox.m50 .btn {
+		width: calc(50% - 6px);
+		min-width: calc(50% - 6px);
+	}
+	.comBtnGroup .btnBox.m50.reverse, .comGroupTop .btnList .btnBox.m50.reverse, .comTitH2 .right .btnList .btnBox.m50.reverse {
+		flex-direction: row-reverse;
+	}
+	.comBtnGroup .btnBox.m70, .comGroupTop .btnList .btnBox.m70, .comTitH2 .right .btnList .btnBox.m70 {
+		flex-wrap: nowrap;
+	}
+	.comBtnGroup .btnBox.m70 .btn:last-child, .comGroupTop .btnList .btnBox.m70 .btn:last-child, .comTitH2 .right .btnList .btnBox.m70 .btn:last-child {
+		width: 30%;
+		min-width: 30%;
+	}
+	.comBtnGroup .moR .btnBox.min, .comGroupTop .btnList .moR .btnBox.min, .comTitH2 .right .btnList .moR .btnBox.min {
+		justify-content: flex-end;
+	}
+	.comBtnGroup .moL .btnBox.min, .comGroupTop .btnList .moL .btnBox.min, .comTitH2 .right .btnList .moL .btnBox.min {
+		justify-content: flex-start;
+	}
+}
+.comBtnGroup.section, .comGroupTop .section.btnList, .comTitH2 .right .section.btnList {
+	margin-top: 60px;
+}
+@media screen and (max-width: 767px) {
+	.comBtnGroup.section, .comGroupTop .section.btnList, .comTitH2 .right .section.btnList {
+		margin-top: 40px;
+	}
+}
+
+
+
+
+/* ----- 폼 박스 ----- */
+.frmBox {
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	position: relative;
+}
+.frmBox.maxCont {
+	width: max-content;
+}
+.frmBox.frmTini {
+	width: auto;
+	min-width: auto;
+}
+.frmBox.frmXs {
+	width: auto;
+	min-width: auto;
+}
+.frmBox.frmSm {
+	width: auto;
+	min-width: auto;
+}
+.frmBox.frmMd {
+	width: 300px;
+	min-width: 300px;
+}
+@media screen and (max-width: 767px) {
+	.frmBox.frmMd {
+		width: 100%;
+		min-width: 100%;
+	}
+}
+.frmBox.frmLg {
+	width: 400px;
+	min-width: 400px;
+}
+@media screen and (max-width: 767px) {
+	.frmBox.frmLg {
+		width: 100%;
+		min-width: 100%;
+	}
+}
+.frmBox.frmXL {
+	width: auto;
+	min-width: auto;
+}
+.frmBox:hover .btnReset {
+	display: block;
+}
+.frmBox.rdoBtn {
+	align-items: center;
+	height: 48px;
+}
+.frmBox .btnReset {
+	width: 24px;
+	height: 24px;
+	font-size: 0;
+	background: url(../images/ic_24_input_re.svg) center no-repeat;
+	position: absolute;
+	right: 16px;
+	top: 12px;
+	display: none;
+}
+
+/* ----- 입력필드 ----- */
+.iptText {
+	width: 100%;
+	height: 48px;
+	padding: 0 16px;
+	color: var(--Gray-800);
+	font-size: 16px;
+	font-weight: 400;
+	line-height: normal;
+	border-radius: 8px;
+	border: 1px solid var(--Gray-300);
+	background-color: #FFF;
+}
+.iptText::placeholder {
+	color: var(--Gray-300);
+}
+.iptText:focus {
+	padding: 0 15px;
+	border: 2px solid var(--Gray-800);
+	outline: none;
+}
+@media screen and (max-width: 767px) {
+	.iptText:focus {
+		padding: 0 12px;
+	}
+}
+.iptText:focus + .btnReset {
+	display: block;
+}
+.iptText:read-only {
+	padding: 0 16px;
+	color: var(--Gray-600);
+	border: 1px solid var(--Gray-200);
+	background: #F5F5F8;
+}
+.iptText:disabled {
+	color: var(--Gray-400);
+	border: 1px solid var(--Gray-200, #CED1D6);
+	background: #F7F7F7;
+}
+.iptText:read-only + .btnReset {
+	display: none !important;
+}
+.iptText:disabled + .btnReset {
+	display: none !important;
+}
+@media screen and (max-width: 767px) {
+	.iptText {
+		padding: 0 12px;
+	}
+}
+.iptText.lg {
+	height: 58px;
+}
+@media screen and (max-width: 767px) {
+	.iptText.lg {
+		padding: 0 16px;
+	}
+}
+.iptText.sm {
+	height: 38px;
+}
+
+.iptTextArea {
+	width: 100%;
+	padding: 12px 16px;
+	color: var(--Gray-800);
+	font-size: 16px;
+	font-weight: 400;
+	line-height: normal;
+	border-radius: 8px;
+	border: 1px solid var(--Gray-300);
+	background-color: #FFF;
+	resize: none;
+}
+.iptTextArea::placeholder {
+	color: var(--Gray-300);
+}
+.iptTextArea:focus {
+	padding: 11px 15px;
+	border: 2px solid var(--Gray-800);
+	outline: none;
+}
+.iptTextArea:read-only {
+	padding: 0 16px;
+	color: var(--Gray-600);
+	border: 1px solid var(--Gray-200);
+	background: #F5F5F8;
+}
+.iptTextArea:disabled {
+	color: var(--Gray-400);
+	border: 1px solid var(--gray-gray-40);
+	background: #E3E3E3;
+}
+
+
+
+
+/* ----- 버튼 ----- */
+.btn {
+	width: max-content;
+	height: 48px;
+	padding: 0 24px;
+	font-size: 16px;
+	font-weight: 500;
+	border-radius: 8px;
+	line-height: 46px;
+	display: inline-block;
+}
+.btn img {
+	vertical-align: middle;
+}
+.btn.lg {
+	height: 56px;
+	padding: 0 32px;
+	font-size: 18px;
+	line-height: 54px;
+}
+.btn.md {
+	height: 48px;
+	padding: 0 24px;
+	font-size: 16px;
+	line-height: 46px;
+}
+.btn.sm {
+	height: 36px;
+	padding: 0 20px;
+	font-size: 14px;
+	line-height: 34px;
+}
+.btn.xs {
+	height: 32px;
+	padding: 0 12px;
+	font-size: 14px;
+	line-height: 30px;
+}
+.btn.pcW180 {
+	width: 180px;
+}
+.btn.pcW140 {
+	width: 140px;
+}
+.btn.pcW128 {
+	width: 128px;
+}
+.btn.pcW200 {
+	width: 200px;
+}
+.btn.pmW150 {
+	width: 150px;
+}
+@media screen and (max-width: 767px) {
+	.btn.pmW150 {
+		width: 150px !important;
+	}
+}
+.btn.pmW180 {
+	width: 180px;
+}
+@media screen and (max-width: 767px) {
+	.btn.pmW180 {
+		width: 180px !important;
+	}
+}
+.btn.Primary {
+	color: #fff;
+	border: 1px solid var(---Primary);
+	background: var(---Primary);
+}
+.btn.Primary:hover {
+	border: 1px solid #077265;
+	background: #077265;
+}
+.btn.Primary:active {
+	border: 1px solid #05665B;
+	background: #05665B;
+}
+.btn.Primary:disabled {
+	color: var(--Gray-300);
+	border: 1px solid var(--Gray-150);
+	background: var(--Gray-150);
+}
+.btn.gray {
+	color: #fff;
+	border: 1px solid var(--Gray-400);
+	background: var(--Gray-400);
+}
+.btn.gray:hover {
+	border: 1px solid var(--Gray-600);
+	background: var(--Gray-600);
+}
+.btn.gray:active {
+	border: 1px solid var(--Gray-600);
+	background: var(--Gray-600);
+}
+.btn.gray:disabled {
+	color: var(--Gray-300);
+	border: 1px solid var(--Gray-150);
+	background: var(--Gray-150);
+}
+.btn.dkLine {
+	color: var(--Gray-800);
+	border: 1px solid var(--Gray-600);
+	background: #fff;
+}
+.btn.dkLine:hover {
+	color: #000;
+	border: 1px solid #000;
+}
+.btn.dkLine:active {
+	border: 1px solid #000;
+	background: var(--Bg-Line-bg-100);
+}
+.btn.dkLine:disabled {
+	color: var(--Gray-300);
+	border: 1px solid var(--Gray-200);
+	background: var(--Gray-100);
+}
+.btn.gLine {
+	color: var(--Gray-600);
+	border: 1px solid var(--Gray-300);
+	background: #fff;
+}
+.btn.gLine:hover {
+	color: #111;
+	border: 1px solid var(--Gray-500);
+}
+.btn.gLine:active {
+	border: 1px solid var(--Gray-500);
+	background: var(--Bg-Line-bg-100);
+}
+.btn.gLine:disabled {
+	color: var(--Gray-300);
+	border: 1px solid var(--Gray-200);
+	background: var(--Gray-100);
+}
+.btn.downIcon {
+	position: relative;
+	padding: 0 12px;
+}
+.btn.downIcon::before {
+	content: "";
+	width: 20px;
+	height: 20px;
+	display: inline-block;
+	vertical-align: text-top;
+	margin-right: 4px;
+	background: url(../images/ic_20_file_download.svg);
+}
+
+
+/* ----- 셀렉트 ----- */
+select.iptSlt {
+	width: 100%;
+	height: 48px;
+	padding: 0 16px;
+	color: var(--Gray-600);
+	border-radius: 8px;
+	border: 1px solid var(--Gray-300);
+	background: #fff url(../images/ic_24_down_arr.svg) right 18px center no-repeat;
+}
+select.iptSlt.typeLine {
+	padding: 0 26px 0 2px;
+	color: var(--Gray-900);
+	font-size: 20px;
+	font-weight: 600;
+	border-radius: 0;
+	border: 0;
+	border-bottom: 2px solid var(--Gray-800);
+	background: #fff url(../images/ic_24_down_arr.svg) right 2px center no-repeat;
+}
+
+/* ----- 디자인셀렉트/드롭다운 ----- */
+.iptSlt {
+	width: 100%;
+	height: 48px;
+	position: relative;
+}
+.iptSlt.on .sltBox {
+	border: 1px solid var(--Gray-800);
+}
+.iptSlt.on .sltBox .sltTitle::after {
+	transform: rotate(180deg);
+}
+.iptSlt.on .sltBox .optionGroup {
+	display: block;
+}
+.iptSlt .sltBox {
+	width: 100%;
+	height: auto;
+	border-radius: 8px;
+	border: 1px solid var(--Gray-300);
+	background-color: #FFF;
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 80;
+	overflow: hidden;
+}
+.iptSlt .sltBox .sltTitle {
+	width: 100%;
+	height: 46px;
+	padding: 0 16px;
+	color: var(--Gray-600);
+	font-size: 16px;
+	font-weight: 400;
+	line-height: normal;
+	align-content: center;
+	position: relative;
+}
+.iptSlt .sltBox .sltTitle::after {
+	content: "";
+	width: 24px;
+	height: 24px;
+	display: block;
+	position: absolute;
+	right: 16px;
+	top: calc(50% - 12px);
+	background-image: url(../images/ic_24_down_arr.svg);
+	background-position: center;
+	background-repeat: no-repeat;
+}
+.iptSlt .sltBox .optionGroup {
+	width: 100%;
+	padding: 5px 0 7px;
+	border-top: 1px solid var(--Gray-800);
+	display: none;
+	background: #fff;
+	overflow: hidden;
+}
+.iptSlt .sltBox .optionGroup .option {
+	width: 100%;
+	height: 39px;
+	padding: 0 16px;
+	color: var(--Gray-600);
+	font-size: 16px;
+	font-weight: 400;
+	line-height: normal;
+	align-content: center;
+}
+.iptSlt .sltBox .optionGroup .option:hover {
+	color: var(--Gray-900);
+	font-weight: 500;
+	background: #F5F5F5;
+}
+@media screen and (max-width: 767px) {
+	.iptSlt .sltBox .sltTitle {
+		padding: 0 12px;
+	}
+	.iptSlt .sltBox .sltTitle::after {
+		content: "";
+		width: 20px;
+		height: 20px;
+		display: block;
+		position: absolute;
+		right: 12px;
+		top: calc(50% - 10px);
+		background-image: url(../images/ic_20_down_arr.svg);
+		background-position: center;
+		background-repeat: no-repeat;
+	}
+}
+.iptSlt.typeLine .sltBox {
+	border-radius: 0;
+	border: 0;
+	border-bottom: 2px solid var(--Gray-800);
+	overflow: visible;
+}
+.iptSlt.typeLine .sltBox .sltTitle {
+	padding: 0 26px 0 2px;
+	color: var(--Gray-900);
+	font-size: 20px;
+	font-weight: 600;
+}
+.iptSlt.typeLine .sltBox .sltTitle::after {
+	right: 2px;
+	top: calc(50% - 10px);
+}
+.iptSlt.typeLine .sltBox .optionGroup {
+	padding: 0;
+	border-top: 1px solid var(--Gray-800);
+	background: #fff;
+	box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.1);
+	overflow: visible;
+}
+.iptSlt.typeLine .sltBox .optionGroup .option {
+	height: 47px;
+	padding: 0 12px;
+	border: 1px solid var(--Bg-Line-line-100);
+	border-top: 0;
+}
+.iptSlt.typeLine .sltBox .optionGroup .option:hover {
+	color: #fff;
+	font-weight: 600;
+	background: var(--Point-Primary2);
+}
+@media screen and (max-width: 767px) {
+	.iptSlt.typeLine .sltBox .sltTitle {
+		font-size: 18px;
+	}
+}
+.iptSlt.lg {
+	height: 56px;
+}
+.iptSlt.lg .sltBox .sltTitle {
+	height: 54px;
+	font-size: 19px;
+}
+.iptSlt.lg .sltBox .optionGroup .option {
+	height: 45px;
+	font-size: 19px;
+}
+.iptSlt.sm {
+	height: 36px;
+}
+.iptSlt.sm .sltBox .sltTitle {
+	height: 34px;
+	font-size: 14px;
+}
+.iptSlt.sm .sltBox .optionGroup .option {
+	height: 30px;
+	font-size: 14px;
+}
+
+.modLinkScroll {
+	width: 100%;
+	margin-top: 60px;
+}
+.modLinkScroll:first-child {
+	margin-top: 0;
+}
+@media screen and (max-width: 767px) {
+	.modLinkScroll {
+		margin-top: 40px;
+	}
+}
+
+.cptSection {
+	width: 100%;
+	margin-top: 60px;
+}
+.cptSection:first-child {
+	margin-top: 0;
+}
+@media screen and (max-width: 767px) {
+	.cptSection {
+		margin-top: 40px;
+	}
+}
+.cptSection.btmLine {
+	padding-bottom: 60px;
+	border-bottom: 10px solid #f4f6fa;
+}
+.cptSection.btmLine:last-child {
+	padding-bottom: 0;
+	border-bottom: none;
+}
+@media screen and (max-width: 767px) {
+	.cptSection.btmLine {
+		padding-bottom: 0;
+		border-bottom: none;
+	}
+	.cptSection.btmLine::after {
+		display: block;
+		content: "";
+		width: calc(100% + 32px);
+		margin-left: -16px;
+		margin-top: 40px;
+		height: 10px;
+		background: #f4f6fa;
+	}
+}
+
+.comGroupTop {
+	width: 100%;
+	margin-bottom: 20px;
+	display: flex;
+	justify-content: space-between;
+}
+.comGroupTop .alignL {
+	width: 100%;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+}
+.comGroupTop .alignR {
+	width: 100%;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+}
+.comGroupTop .unit {
+	margin-left: 5px;
+	display: inline-block;
+}
+.comGroupTop .unit:first-child {
+	margin-left: 0;
+}
+.comGroupTop .unit .text {
+	font-size: 16px;
+	line-height: 1.6;
+	vertical-align: bottom;
+	color: var(--font-700);
+}
+.comGroupTop .unit .total {
+	font-size: 16px;
+	color: var(---Primary);
+	font-weight: 700;
+}
+.comGroupTop .opList {
+	display: flex;
+	gap: 12px;
+}
+.comGroupTop .opList .item .frmBox {
+	width: 210px;
+	min-width: 210px;
+}
+.comGroupTop .opList .item .frmSearch {
+	width: 400px;
+	min-width: 400px;
+}
+.comGroupTop .legendList {
+	display: flex;
+	justify-content: flex-end;
+	column-gap: 16px;
+}
+.comGroupTop .legendList .lgItem .legend {
+	width: 16px;
+	height: 16px;
+	border-radius: 4px;
+	line-height: 17px;
+	text-align: center;
+	font-size: 0.6875rem;
+	color: #fff;
+	font-weight: 700;
+	display: inline-block;
+}
+.comGroupTop .legendList .lgItem .legend.type01 {
+	background: #2c77bc;
+}
+.comGroupTop .legendList .lgItem .legend.type02 {
+	background: #34ADA8;
+}
+.comGroupTop .legendList .lgItem .legend.type03 {
+	background: #92BA2B;
+}
+.comGroupTop .legendList .lgItem .legend.type04 {
+	background: #F07E3F;
+}
+.comGroupTop .legendList .lgItem .txt {
+	font-size: 14px;
+	font-weight: 500;
+	color: var(--Gray-700);
+	display: inline-block;
+}
+.comGroupTop .btnReload {
+	padding-left: 20px;
+	font-size: 14px;
+	color: var(--Gray-700);
+	background: url(../images/ic_16_reload.svg) left center no-repeat;
+}
+.comGroupTop .btnReload.color {
+	color: var(--Gray-500, #6F7176);
+	background-image: url("../images/ic_16_reload_b.svg");
+}
+.comGroupTop.prediction {
+	margin-top: 60px;
+}
+
+
+.comCalendar .monthData {
+	padding: 8px 0;
+	text-align: center;
+}
+.comCalendar .monthData b {
+	font-size: 1.5rem;
+	color: var(--Gray-900);
+	font-weight: 600;
+	line-height: 1.3;
+}
+.comCalendar .weekDays {
+	padding: 6px 16px;
+	border-radius: 8px;
+	background: var(--Bg-Line-bg-200);
+	display: flex;
+	column-gap: 15px;
+}
+.comCalendar .dayGroup {
+	min-width: 290px;
+	padding: 16px;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 14px 15px;
+}
+.comCalendar .dayItem {
+	font-size: 14px;
+	flex: 1 1 calc(14.28% - 12.85px);
+	text-align: center;
+}
+.comCalendar .dayItem p {
+	color: var(--Gray-600);
+}
+.comCalendar .dayItem p.sun {
+	color: var(--Point-Red);
+}
+.comCalendar .dayItem > span {
+	width: 24px;
+	height: 24px;
+	text-align: center;
+	line-height: 24px;
+	color: var(--Gray-800);
+	display: inline-block;
+}
+.comCalendar .dayItem > span.none {
+	color: var(--Gray-800);
+	opacity: 0.3;
+}
+.comCalendar .dayItem .mark {
+	border-radius: 50%;
+	color: #fff;
+	cursor: pointer;
+}
+.comCalendar .dayItem .mark.mint {
+	background: var(--Point-Primary2);
+}
+.comCalendar .dayItem .mark.blue {
+	background: var(--Point-Blue);
+}
+.comCalendar .dayItem .mark.yellow {
+	background: #ffb444;
+}
+.comCalendar .dayItem.today .txt {
+	color: var(--Gray-900);
+	font-weight: 800;
+	position: relative;
+}
+.comCalendar .dayItem.today .txt::after {
+	display: block;
+	content: "";
+	width: 4px;
+	height: 4px;
+	border-radius: 50%;
+	background: var(--Gray-300);
+	position: absolute;
+	bottom: 5px;
+	left: 50%;
+	transform: translateX(-50%);
+}
+.comCalendar.inPop .weekDays {
+	padding: 10px 16px;
+	column-gap: 8px;
+	background: transparent;
+}
+.comCalendar.inPop .weekDays .dayItem {
+	font-size: 14px;
+}
+.comCalendar.inPop .dayGroup {
+	padding: 0 16px 16px;
+	gap: 8px;
+}
+.comCalendar.inPop .dayItem {
+	font-size: 16px;
+}
+.comCalendar.inPop .dayItem > span {
+	width: 40px;
+	height: 40px;
+	line-height: 40px;
+}
+
+
+/* --------------------------- 팝업 Large --------------------------- */
+.modPopup {
+	width: 100%;
+	height: 100%;
+	display: none;
+	justify-content: center;
+	align-items: center;
+	position: fixed;
+	left: 0;
+	top: 0;
+	z-index: 1000;
+	transform: translate(0, 0);
+}
+@media screen and (min-width: 768px) {
+	.modPopup *:hover::-webkit-scrollbar-thumb {
+		background: rgba(87, 87, 87, 0.54);
+	}
+	.modPopup *::-webkit-scrollbar {
+		width: 30px;
+		padding: 10px;
+		background-color: #fff;
+	}
+	.modPopup *::-webkit-scrollbar-thumb {
+		padding: 10px;
+		border: 12px solid #fff;
+		border-radius: 15px;
+		background: rgba(87, 87, 87, 0.2); /* box-shadow: inset 6px 6px 0 rgba(87, 87, 87, 0.54); */
+	}
+	.modPopup *::-webkit-scrollbar-track {
+		background-color: rgba(0, 0, 0, 0);
+	}
+}
+.modPopup.on {
+	display: flex;
+}
+.modPopup.on .popupDim {
+	opacity: 0;
+	animation: popOpenDimd 0.2s linear forwards;
+}
+@keyframes popOpenDimd {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+.modPopup.on .popupArea .popupInMotion {
+	opacity: 1;
+}
+@keyframes popOpenScale {
+	0% {
+		opacity: 0;
+		transform: scale(0.7);
+	}
+	100% {
+		opacity: 1;
+		transform: scale(1);
+	}
+}
+.modPopup .popupDim {
+	width: 100%;
+	height: 100%;
+	font-size: 0;
+	background: rgba(0, 0, 0, 0.8);
+	position: fixed;
+	left: 0;
+	top: 0;
+}
+.modPopup .popupArea {
+	width: 100%;
+	height: auto;
+	max-height: calc(100% - 200px);
+}
+.modPopup .popupArea .popupInMotion {
+	width: 100%;
+	height: 100%;
+}
+.modPopup .popupArea .popupContainer {
+	width: 100%;
+	height: 100%;
+	max-height: calc(100vh - 200px);
+	border-radius: 16px;
+	overflow: hidden;
+}
+.modPopup .popupArea .popupContArea {
+	width: 100%;
+	height: 100%;
+	max-height: calc(100vh - 200px);
+	padding-bottom: 40px;
+	position: relative;
+	background: #fff;
+	display: flex;
+	flex-direction: column;
+}
+.modPopup .popupArea .popupContArea .btnPopClose {
+	width: 44px;
+	height: 44px;
+	font-size: 0;
+	border: 0;
+	background: url(../images/ic_24_pop_close.svg) center no-repeat;
+	position: absolute;
+	right: 22px;
+	top: 10px;
+	z-index: 10;
+}
+.modPopup .popupArea .popupContArea .popTitle {
+	width: 100%;
+	min-height: 64px;
+	padding: 20px 88px 20px 32px;
+	font-size: 18px;
+	font-weight: 700;
+	color: var(--Gray-900, #111);
+	line-height: 1.3;
+	border-bottom: 1px solid var(--Bg-Line-line-100);
+	position: relative;
+	word-break: keep-all;
+}
+.modPopup .popupArea .popupContArea .popTitle.shadow {
+	box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.1);
+}
+.modPopup .popupArea .popupContArea .popCont {
+	width: 100%;
+	max-height: calc(100vh - 304px);
+	padding: 28px 2px 0 32px;
+	overflow: auto;
+	overflow-y: scroll;
+}
+.modPopup .popupArea .popupContArea .popCont .popSubTitle {
+	color: var(---Primary, #078B7B);
+	font-size: 20px;
+	font-weight: 700;
+	line-height: 140%; /* 28px */
+}
+.modPopup .popupArea .popupContArea .popCont .popSubTitle + .comFormTable {
+	margin-top: 12px;
+}
+.modPopup .popupArea .popupContArea .popCont .comPrivacyBox {
+	margin-top: 48px;
+}
+.modPopup .popupArea .popupContArea .popCont .comPrivacyBox .infoBox .boxCont .comNumList > .listGroup {
+	margin-top: 0;
+}
+.modPopup .popupArea .popupContArea .popCont .comPrivacyBox .infoBox .boxCont .comNumList > .listGroup > .item {
+	padding-left: 0;
+	font-weight: 400;
+}
+.modPopup .popupArea .popupContArea .popCont .comPrivacyBox .infoBox .boxCont .comNumList > .listGroup > .item:before {
+	display: none;
+}
+.modPopup .popupArea .popupContArea .popCont .comPrivacyBox .infoBox .boxCont .comNumList > .listGroup > .item .txt {
+	margin-top: -4px;
+}
+.modPopup .popupArea .popupContArea .popCont .comPrivacyBox .infoBox .boxCont .comNumList > .listGroup > .item.space {
+	padding-left: 24px;
+	margin-top: 0;
+}
+.modPopup .popupArea .popupContArea .popCont .comPrivacyBox .infoBox .boxCont .comNumList > .listGroup > .item.space .anno {
+	margin-top: 0;
+}
+.modPopup .popupArea .popupContArea .popCont .comPrivacyBox .infoBox .boxCont .comNumList > .listGroup > .item .listGroup {
+	margin-top: 8px;
+}
+.modPopup .popupArea .popupContArea .popBtm {
+	padding: 20px 40px 0;
+	display: flex;
+	justify-content: flex-end;
+}
+.modPopup .popupArea .popupContArea .popBtm.division {
+	justify-content: space-between;
+}
+.modPopup .popupArea .popupContArea .popBtm .btn {
+	padding: 0 10px;
+	height: 30px;
+	margin-left: 2px;
+	font-size: 14px;
+	font-weight: 400;
+	white-space: nowrap;
+	border-radius: 4px;
+}
+.modPopup.md .popupArea {
+	max-width: 600px;
+}
+.modPopup.lg .popupArea {
+	max-width: 960px;
+}
+
+
+
+.cptPersonDesc {
+	margin-top: 60px;
+}
+.cptPersonDesc:first-child {
+	margin-top: 0;
+}
+.cptPersonDesc .profBox {
+	margin-top: 20px;
+	padding: 60px 40px 60px 60px;
+	border-radius: 20px;
+	background: var(--Bg-Line-bg-50);
+	display: flex;
+	column-gap: 80px;
+	position: relative;
+}
+.cptPersonDesc .profBox .chkArea {
+	position: absolute;
+	top: 24px;
+	right: 40px;
+}
+.cptPersonDesc .profBox .chkArea label {
+	padding-left: 32px;
+	font-size: 16px;
+	color: var(--Gray-600);
+	font-weight: 500;
+	line-height: 1.6;
+	background: url(../images/ic_24_chk_star_off.svg) left center no-repeat;
+	cursor: pointer;
+}
+.cptPersonDesc .profBox .chkArea input[type=checkbox]:checked + label {
+	background-image: url(../images/ic_24_chk_star_on.svg);
+}
+.cptPersonDesc .profBox .photoArea {
+	flex: 0 1 auto;
+	padding-top: 20px;
+}
+.cptPersonDesc .profBox .photoArea .thumArea {
+	width: 186px;
+	height: 186px;
+	padding: 13px;
+	background: url(../images/thum_person_border.svg) center no-repeat;
+}
+.cptPersonDesc .profBox .photoArea .thumArea .thumWrap {
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+	overflow: hidden;
+	text-align: center;
+}
+.cptPersonDesc .profBox .photoArea .thumArea .thumWrap img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+.cptPersonDesc .profBox .photoArea .txtArea {
+	margin-top: 24px;
+	text-align: center;
+}
+.cptPersonDesc .profBox .photoArea .txtArea .name {
+	font-size: 2.5rem;
+	font-weight: 500;
+	color: var(--Gray-900);
+	display: block;
+}
+.cptPersonDesc .profBox .photoArea .txtArea .date {
+	font-size: 16px;
+	font-weight: 300;
+	color: var(--Gray-600);
+	line-height: 1.6;
+	font-style: normal;
+	display: block;
+}
+.cptPersonDesc .profBox .photoArea .txtArea .cateGroup {
+	margin-top: 12px;
+}
+.cptPersonDesc .profBox .photoArea .txtArea .cateGroup .cate {
+	height: 24px;
+	padding: 0 8px;
+	border-radius: 4px;
+	line-height: 24px;
+	font-size: 0.75rem;
+	color: #fff;
+	font-weight: 600;
+	background: var(--Gray-500);
+	display: inline-block;
+	vertical-align: middle;
+}
+.cptPersonDesc .profBox .photoArea .txtArea .cateGroup .cate.blue {
+	background: var(--Point-Blue);
+}
+.cptPersonDesc .profBox .photoArea .txtArea .cateGroup .cate.mint {
+	background: var(--Point-Primary2);
+}
+.cptPersonDesc .profBox .photoArea .txtArea .cateGroup .cate.orange {
+	background: var(--Point-Orange);
+}
+.cptPersonDesc .profBox .infoArea {
+	flex: 0 1 auto;
+}
+.cptPersonDesc .profBox .infoArea .infoGroup {
+	display: flex;
+	gap: 20px 80px;
+	align-items: flex-start;
+	flex-wrap: wrap;
+}
+.cptPersonDesc .profBox .infoArea .infoGroup .infoItem {
+	flex: 0 0 calc(50% - 40px);
+}
+.cptPersonDesc .profBox .infoArea .infoGroup .infoItem .infoTit {
+	padding-bottom: 8px;
+	margin-bottom: 16px;
+	border-bottom: 1px solid var(--Gray-900);
+	font-size: 20px;
+	color: var(--Gray-900);
+	font-weight: 700;
+	line-height: 1.4;
+}
+.cptPersonDesc .profBox .infoArea .infoGroup .infoItem .dlList .item {
+	margin-top: 8px;
+	display: flex;
+	position: relative;
+}
+.cptPersonDesc .profBox .infoArea .infoGroup .infoItem .dlList .item:first-child {
+	margin-top: 0;
+}
+.cptPersonDesc .profBox .infoArea .infoGroup .infoItem .dlList .item .tit {
+	min-width: 125px;
+	font-size: 16px;
+	color: var(--Gray-700);
+	line-height: 1.6;
+	font-weight: 400;
+	display: inline-block;
+	vertical-align: middle;
+	flex: 1 0 34%;
+}
+.cptPersonDesc .profBox .infoArea .infoGroup .infoItem .dlList .item .txt {
+	font-size: 16px;
+	color: var(--Gray-900);
+	line-height: 1.6;
+	font-weight: 600;
+	font-style: normal;
+	display: inline-block;
+	vertical-align: middle;
+	flex: 1 1 66%;
+}
+.cptPersonDesc .profBox .infoArea .infoGroup .infoItem .dlList .item .txt.etc {
+	font-weight: 400;
+}
+.cptPersonDesc .profBox .infoArea .infoGroup .infoItem .dlList .item .popIcon {
+	width: 20px;
+	height: 20px;
+	margin-left: 8px;
+	font-size: 0;
+	background: url(../images/ic_20_pop_open.svg) center no-repeat;
+	vertical-align: text-top;
+}
+.cptPersonDesc .profBox .infoArea .infoGroup .infoItem .dlList .item a {
+	text-decoration: underline;
+	text-underline-position: under;
+}
+.cptPersonDesc .profBox .infoArea .infoGroup .infoItem.full {
+	flex: 0 0 100%;
+}
+.cptPersonDesc .profBox .infoArea .infoGroup .infoItem.full .dlList {
+	display: flex;
+	column-gap: 80px;
+}
+.cptPersonDesc .profBox .infoArea .infoGroup .infoItem.full .dlList .item {
+	flex: 0 0 calc(50% - 40px);
+	margin-top: 0;
+}
+.cptPersonDesc .profBox .infoArea .infoGroup .infoItem.full .dlList.full {
+	flex-direction: column;
+	gap: 8px 0;
+}
+.cptPersonDesc .profBox .infoArea .infoGroup .infoItem.full .dlList.full .item {
+	flex: none;
+}
+.cptPersonDesc .profBox .infoArea .infoGroup .infoItem.full .dlList.full .item .tit {
+	flex: 0 calc((100% - 80px) * 0.17);
+}
+.cptPersonDesc .profBox .infoArea .infoGroup .infoItem.full .dlList.full .item .txt {
+	flex: 1;
+}
+.cptPersonDesc .profBox .infoArea .infoGroup .infoItem.full .dlList.full .item .thumList {
+	flex: 1;
+	display: flex;
+	gap: 0 24px;
+	flex-wrap: wrap;
+}
+.cptPersonDesc .profBox .infoArea .infoGroup .infoItem.full .dlList.full .item .thumList .thum {
+	width: 180px;
+	max-width: 100%;
+}
+.cptPersonDesc .profBox .infoArea .infoGroup .infoItem.full .dlList.full .item .thumList .thum img {
+	display: block;
+	max-width: 100%;
+	border-radius: 12px;
+	overflow: hidden;
+}
+.cptPersonDesc .dataPart {
+	margin-top: 60px;
+}
+.cptPersonDesc .dataPart .comTitH3 {
+	position: relative;
+}
+.cptPersonDesc .dataPart .comTitH3 .comInfoLayerPop {
+	left: auto;
+	right: 0;
+}
+.cptPersonDesc .digramPart {
+	width: 100%;
+	margin-top: 60px;
+}
+.cptPersonDesc .digramPart .comTitH2 {
+	margin-top: 60px;
+}
+.cptPersonDesc .digramPart .comTitH2:first-child {
+	margin-top: 0;
+}
+.cptPersonDesc.inPopup .profBox {
+	padding: 50px 24px 32px;
+	column-gap: 32px;
+}
+.cptPersonDesc.inPopup .profBox .chkArea {
+	right: 24px;
+	top: 20px;
+}
+.cptPersonDesc.inPopup .profBox .infoArea .infoGroup {
+	gap: 40px 32px;
+}
+.cptPersonDesc.inPopup .profBox .infoArea .infoGroup .infoItem {
+	flex: 0 0 calc(50% - 16px);
+}
+.cptPersonDesc.inPopup .profBox .infoArea .infoGroup .infoItem .dlList .item .tit {
+	min-width: 120px;
+	font-size: 15px;
+}
+.cptPersonDesc.inPopup .profBox .infoArea .infoGroup .infoItem .dlList .item .txt {
+	font-size: 15px;
+}
+.cptPersonDesc.inPopup .profBox .infoArea .infoGroup .infoItem.full {
+	flex: 0 0 100%;
+}
+.cptPersonDesc.inPopup .profBox .infoArea .infoGroup .infoItem.full .dlList {
+	column-gap: 32px;
+}
+
+
+.comInfoLayerPop {
+	width: 100%;
+	max-width: 455px;
+	display: none;
+	position: absolute;
+	top: 28px;
+	left: 0;
+	z-index: 9;
+}
+.comInfoLayerPop.on {
+	display: block;
+}
+.comInfoLayerPop .popWrap {
+	width: 100%;
+	padding: 12px;
+	border-radius: 8px;
+	border: 1px solid var(--Bg-Line-line-100);
+	background: #fff;
+}
+.comInfoLayerPop .popWrap .popHead {
+	margin-bottom: 12px;
+	display: flex;
+}
+.comInfoLayerPop .popWrap .popHead .popTit {
+	font-size: 15px;
+	color: var(---Primary);
+	font-weight: 600;
+	line-height: 1.4;
+}
+.comInfoLayerPop .popWrap .popHead .popClose {
+	width: 16px;
+	height: 16px;
+	margin-left: auto;
+	font-size: 0;
+	background: url(../images/ic_24_pop_close.svg) center/16px no-repeat;
+}
+.comInfoLayerPop .popWrap .popBody {
+	width: 100%;
+	height: 205px;
+	overflow-y: auto;
+}
+.comInfoLayerPop .popWrap .popBody .sumBox {
+	width: 100%;
+	height: 25px;
+	margin-bottom: 12px;
+	padding: 0 8px;
+	background: var(--Bg-Line-bg-100);
+	line-height: 25px;
+}
+.comInfoLayerPop .popWrap .popBody .sumBox .summary {
+	font-size: 14px;
+	color: var(--Gray-800);
+	line-height: 1.6;
+}
+.comInfoLayerPop .popWrap .popBody .sumBox .summary em {
+	color: var(--Point-Red);
+	font-weight: 600;
+}
+.comInfoLayerPop .popWrap .popBody .carrer, .comInfoLayerPop .popWrap .popBody .warned {
+	width: 100%;
+	margin-top: 12px;
+	display: flex;
+	column-gap: 12px;
+	align-items: flex-start;
+}
+.comInfoLayerPop .popWrap .popBody .carrer:first-child, .comInfoLayerPop .popWrap .popBody .warned:first-child {
+	margin-top: 0;
+}
+.comInfoLayerPop .popWrap .popBody .carrer span, .comInfoLayerPop .popWrap .popBody .warned span {
+	display: inline-block;
+	font-size: 13px;
+	line-height: 1.4;
+	word-break: keep-all;
+}
+.comInfoLayerPop .popWrap .popBody .carrer span.date, .comInfoLayerPop .popWrap .popBody .warned span.date {
+	font-weight: 300;
+	color: var(--Gray-600);
+	flex: 0 0 55px;
+}
+.comInfoLayerPop .popWrap .popBody .carrer span.name, .comInfoLayerPop .popWrap .popBody .warned span.name {
+	color: var(--Gray-800);
+	flex: 1 1 auto;
+}
+.comInfoLayerPop .popWrap .popBody .carrer span.etc, .comInfoLayerPop .popWrap .popBody .warned span.etc {
+	margin-left: auto;
+	text-align: right;
+	font-weight: 600;
+	color: var(--Gray-900);
+	flex: 0 0 102px;
+}
+.comInfoLayerPop .popWrap .popBody .carrer span.etc .subTit, .comInfoLayerPop .popWrap .popBody .warned span.etc .subTit {
+	font-weight: 400;
+	font-style: normal;
+}
+.comInfoLayerPop .popWrap .popBody .warned {
+	flex-wrap: wrap;
+	gap: 6px 12px;
+}
+.comInfoLayerPop .popWrap .popBody .warned span.date {
+	color: var(--Gray-900);
+	flex: 0 0 70px;
+}
+.comInfoLayerPop .popWrap .popBody .warned span.name {
+	color: var(--Gray-900);
+	flex: 0 1 calc(100% - 169px);
+}
+.comInfoLayerPop .popWrap .popBody .warned span.etc {
+	flex: 0 0 75px;
+}
+.comInfoLayerPop .popWrap .popBody .warned .result {
+	font-size: 13px;
+	color: var(--Gray-600);
+	line-height: 1.4;
+	flex: 0 0 100%;
+}
+
+
+.cptNumbGuide {
+	margin-top: 60px;
+}
+.cptNumbGuide:first-child {
+	margin-top: 0;
+}
+.cptNumbGuide .imgArea {
+	padding: 20px 24px;
+	border-radius: 12px;
+	background: var(--Bg-Line-bg-200);
+	overflow-x: auto;
+}
+.cptNumbGuide .imgArea .mView {
+	display: none;
+}
+.cptNumbGuide .imgArea img {
+	min-width: 100%; width: 100%;
+}
+.cptNumbGuide .descArea {
+	margin-top: 24px;
+}
+.cptNumbGuide .descArea .numGroup .numItem {
+	margin-top: 32px;
+	padding-left: 32px;
+}
+.cptNumbGuide .descArea .numGroup .numItem:first-child {
+	margin-top: 0;
+}
+.cptNumbGuide .descArea .numGroup .numItem .tit {
+	margin-left: -32px;
+}
+.cptNumbGuide .descArea .numGroup .numItem .tit .num {
+	width: 24px;
+	height: 24px;
+	border-radius: 50%;
+	text-align: center;
+	line-height: 24px;
+	font-size: 13px;
+	color: #fff;
+	font-weight: 700;
+	background: var(--Point-Primary2);
+	display: inline-block;
+	vertical-align: middle;
+}
+.cptNumbGuide .descArea .numGroup .numItem .tit .txt {
+	margin-left: 3px;
+	font-size: 18px;
+	color: var(--Gray-900);
+	font-weight: 700;
+	display: inline-block;
+	vertical-align: bottom;
+}
+.cptNumbGuide .descArea .numGroup .numItem .desc {
+	margin-top: 8px;
+	font-size: 16px;
+	color: var(--Gray-800);
+	line-height: 1.6;
+}
+.cptNumbGuide .descArea .numGroup .numItem .comAddGuide, .cptNumbGuide .descArea .numGroup .numItem .comBasicList .item .addGuide, .cptNumbGuide .descArea .numGroup .numItem .comJoinBtmText .item .addGuide, .cptNumbGuide .descArea .numGroup .numItem .comNumList .listGroup .item .addList .item .addGuide, .comNumList .listGroup .item .cptNumbGuide .descArea .numGroup .numItem .addList .item .addGuide, .comBasicList .item .cptNumbGuide .descArea .numGroup .numItem .addGuide, .comJoinBtmText .item .cptNumbGuide .descArea .numGroup .numItem .addGuide, .comNumList .listGroup .item .addList .item .cptNumbGuide .descArea .numGroup .numItem .addGuide, .cptNumbGuide .descArea .numGroup .numItem .cptEtcInfo .infoBox .info dd .infoList .item .addGuide, .cptEtcInfo .infoBox .info dd .infoList .item .cptNumbGuide .descArea .numGroup .numItem .addGuide, .cptNumbGuide .cptDescList .thumList .thumItem .descArea .numGroup .numItem dd .item .addGuide, .cptDescList .thumList .thumItem .cptNumbGuide .descArea .numGroup .numItem dd .item .addGuide, .cptNumbGuide .cptDescList .thumList .thumItem .descArea dd .item .numGroup .numItem .addGuide, .cptDescList .thumList .thumItem .cptNumbGuide .descArea dd .item .numGroup .numItem .addGuide, .cptNumbGuide .descArea .numGroup .numItem .cptImgGuideBox .boxArea .viewArea .dotList .item .addGuide, .cptImgGuideBox .boxArea .viewArea .dotList .item .cptNumbGuide .descArea .numGroup .numItem .addGuide {
+	margin-top: 2px;
+}
+.cptNumbGuide .descArea .numGroup .numItem .comBasicList, .cptNumbGuide .descArea .numGroup .numItem .comJoinBtmText, .cptNumbGuide .descArea .numGroup .numItem .comNumList .listGroup .item .addList, .comNumList .listGroup .item .cptNumbGuide .descArea .numGroup .numItem .addList, .cptNumbGuide .descArea .numGroup .numItem .cptEtcInfo .infoBox .info dd .infoList, .cptEtcInfo .infoBox .info dd .cptNumbGuide .descArea .numGroup .numItem .infoList, .cptNumbGuide .cptDescList .thumList .thumItem .descArea .numGroup .numItem dd, .cptDescList .thumList .thumItem .cptNumbGuide .descArea .numGroup .numItem dd, .cptNumbGuide .descArea .numGroup .numItem .cptImgGuideBox .boxArea .viewArea .dotList, .cptImgGuideBox .boxArea .viewArea .cptNumbGuide .descArea .numGroup .numItem .dotList {
+	margin-left: -13px;
+}
+.cptNumbGuide .descArea .numGroup .numItem .arwArea {
+	width: calc(100% + 32px);
+	margin-left: -32px;
+	margin-top: 20px;
+	display: flex;
+	column-gap: 160px;
+}
+.cptNumbGuide .descArea .numGroup .numItem .arwArea + .arwArea {
+	margin-top: 40px;
+}
+.cptNumbGuide .descArea .numGroup .numItem .arwArea .arwItem {
+	flex: 1 0 calc(50% - 80px);
+	position: relative;
+}
+.cptNumbGuide .descArea .numGroup .numItem .arwArea .arwItem::after {
+	display: block;
+	content: "";
+	width: 64px;
+	height: 24px;
+	background: url(../images/ic_64_arw_right_p.svg) center no-repeat;
+	position: absolute;
+	top: 50%;
+	right: -110px;
+	transform: translateY(-50%);
+}
+.cptNumbGuide .descArea .numGroup .numItem .arwArea .arwItem:last-child::after {
+	display: none;
+}
+.cptNumbGuide .descArea .numGroup .numItem .arwArea .arwItem .comContTable table th {
+	padding: 15px 5px;
+}
+.cptNumbGuide .descArea .numGroup .numItem .arwArea .arwItem .comContTable table td {
+	padding: 15px 5px;
+}
+
+
+.comAddGuide, .comBasicList .item .addGuide, .comJoinBtmText .item .addGuide, .cptEtcInfo .infoBox .info dd .infoList .item .addGuide, .cptDescList .thumList .thumItem .descArea dd .item .addGuide, .cptImgGuideBox .boxArea .viewArea .dotList .item .addGuide, .comNumList .listGroup .item .addList .item .addGuide {
+	margin-top: 12px;
+}
+.comAddGuide:first-child, .comBasicList .item .addGuide:first-child, .comJoinBtmText .item .addGuide:first-child, .cptEtcInfo .infoBox .info dd .infoList .item .addGuide:first-child, .cptDescList .thumList .thumItem .descArea dd .item .addGuide:first-child, .cptImgGuideBox .boxArea .viewArea .dotList .item .addGuide:first-child, .comNumList .listGroup .item .addList .item .addGuide:first-child {
+	margin-top: 0;
+}
+.comAddGuide.mgH, .comBasicList .item .mgH.addGuide, .comJoinBtmText .item .mgH.addGuide, .cptEtcInfo .infoBox .info dd .infoList .item .mgH.addGuide, .cptDescList .thumList .thumItem .descArea dd .item .mgH.addGuide, .cptImgGuideBox .boxArea .viewArea .dotList .item .mgH.addGuide, .comNumList .listGroup .item .addList .item .mgH.addGuide {
+	margin-top: 24px;
+}
+.comAddGuide .guide, .comBasicList .item .addGuide .guide, .comJoinBtmText .item .addGuide .guide, .cptEtcInfo .infoBox .info dd .infoList .item .addGuide .guide, .cptDescList .thumList .thumItem .descArea dd .item .addGuide .guide, .cptImgGuideBox .boxArea .viewArea .dotList .item .addGuide .guide, .comNumList .listGroup .item .addList .item .addGuide .guide {
+	padding-left: 20px;
+	margin-top: 4px;
+	font-size: 14px;
+	color: var(--Gray-600);
+	line-height: 1.6;
+	background: url(../images/ico_guide_default.svg) left 5px no-repeat;
+}
+.comAddGuide .guide:first-child, .comBasicList .item .addGuide .guide:first-child, .comJoinBtmText .item .addGuide .guide:first-child, .cptEtcInfo .infoBox .info dd .infoList .item .addGuide .guide:first-child, .cptDescList .thumList .thumItem .descArea dd .item .addGuide .guide:first-child, .cptImgGuideBox .boxArea .viewArea .dotList .item .addGuide .guide:first-child, .comNumList .listGroup .item .addList .item .addGuide .guide:first-child {
+	margin-top: 0;
+}
+.comAddGuide.point .guide, .comBasicList .item .point.addGuide .guide, .comJoinBtmText .item .point.addGuide .guide, .cptEtcInfo .infoBox .info dd .infoList .item .point.addGuide .guide, .cptDescList .thumList .thumItem .descArea dd .item .point.addGuide .guide, .cptImgGuideBox .boxArea .viewArea .dotList .item .point.addGuide .guide, .comNumList .listGroup .item .addList .item .point.addGuide .guide {
+	padding-left: 24px;
+	font-size: 15px;
+	color: var(--Point-Red);
+	font-weight: 500;
+	background-image: url(../images/ic_20_danger.svg);
+	background-position: left 2px;
+}
+.comAddGuide.space, .comBasicList .item .space.addGuide, .comJoinBtmText .item .space.addGuide, .cptEtcInfo .infoBox .info dd .infoList .item .space.addGuide, .cptDescList .thumList .thumItem .descArea dd .item .space.addGuide, .cptImgGuideBox .boxArea .viewArea .dotList .item .space.addGuide, .comNumList .listGroup .item .addList .item .space.addGuide {
+	padding-left: 18px;
+}
+
+
+.comContTable {
+	margin-top: 14px;
+}
+.comContTable:first-child {
+	margin-top: 0;
+}
+.comContTable.mgH20 {
+	margin-top: 20px;
+}
+.comContTable.mgH32 {
+	margin-top: 32px;
+}
+.comContTable .mView {
+	display: none;
+}
+.comContTable .tableArea {
+	overflow: auto;
+}
+.comContTable .tableArea.sizeS table {
+	min-width: 600px;
+}
+.comContTable .tableArea.sizeM table {
+	min-width: 800px;
+}
+.comContTable .tableArea.sizeL table {
+	min-width: 1000px;
+}
+.comContTable .tableArea.sizeXL table {
+	min-width: 1200px;
+}
+.comContTable table {
+	width: 100%;
+	border-collapse: collapse;
+	table-layout: fixed;
+	border-top: 2px solid var(--Gray-900);
+}
+.comContTable table th {
+	padding: 20px 5px;
+	border-bottom: 1px solid var(--Bg-Line-line-200);
+	border-right: 1px solid var(--Bg-Line-line-200);
+	text-align: center;
+	font-size: 15px;
+	color: var(--Gray-900);
+	font-weight: 600;
+	line-height: 1.3;
+	background: var(--Bg-Line-bg-100);
+}
+.comContTable table th:last-child {
+	border-right: none;
+}
+.comContTable table .lineR {
+	border-right-color: var(--Gray-300);
+}
+.comContTable table .rowLineR {
+	border-right: 1px solid var(--Bg-Line-line-200) !important;
+}
+.comContTable table thead th {
+	border-bottom: 1px solid var(--Gray-900);
+	border-right: 1px solid var(--Bg-Line-line-200);
+}
+.comContTable table tbody td {
+	padding: 20px 5px;
+	text-align: center;
+	font-size: 15px;
+	color: var(--Gray-700);
+	border-bottom: 1px solid var(--Bg-Line-line-200);
+	border-right: 1px solid var(--Bg-Line-line-200);
+}
+.comContTable table tbody td:last-child {
+	border-right: none;
+}
+.comContTable table tbody td .txtBtn {
+	text-decoration: underline;
+	text-underline-position: under;
+}
+.comContTable table tbody td .mark {
+	height: 24px;
+	padding: 0 8px;
+	border-radius: 4px;
+	line-height: 24px;
+	font-size: 0.75rem;
+	font-weight: 600;
+	color: #fff;
+	display: inline-block;
+	vertical-align: middle;
+}
+.comContTable table tbody td .mark.orange {
+	background: var(--Point-Orange);
+}
+.comContTable table tbody td .mark.blue {
+	background: var(--Point-Blue);
+}
+.comContTable table tbody td .mark.mint {
+	background: var(--Point-Primary2);
+}
+.comContTable table .frm {
+	padding: 13px 5px;
+}
+.comContTable table .left {
+	padding-left: 16px;
+	text-align: left;
+}

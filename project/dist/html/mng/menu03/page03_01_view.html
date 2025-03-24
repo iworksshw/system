@@ -309,6 +309,7 @@
                                                         <div class="textBox">첨부파일테스트.확장자</div>
                                                     </div>
                                                 </div>
+                                                <button class="gridBtn gLine" onclick="openPopup('sample01')" style="margin-left: auto;">사진보기</button> <!-- 20250324 추가 -->
                                             </div>
                                         </td>
                                     </tr>
@@ -332,6 +333,62 @@
 
                     </div>
                     <!-- //컨텐츠 내용 -->
+
+                    <div id="sample01" class="modPopup md on"> <!-- class - on : 팝업오픈 -->
+                        <div class="popupDim">딤영역</div>
+                        <div class="popupArea"> <!-- style - 너비값(width), 높이값(height) : 팝업 너비 및 높이 지정 -->
+                            <div class="popupInMotion">
+                                <div class="popupContainer">
+                                    <div class="popupContArea">
+                                        <button class="btnPopClose" onclick="closePopup('sample01');">닫기</button>
+                                        <div class="popTitle">사진보기</div>
+                                        <div class="popCont">
+                                            <!-- 팝업 컨텐츠 영역 -->
+
+                                             <!-- 20250324 추가 -->
+                                            <div class="comScaleView">
+                                                <div class="scaleViewArea">
+                                                    <img src="../../../common/images/mng/board_temp_img02.png" alt="착순판정 이미지 자료">
+                                                </div>
+                                            </div>
+                                            <script>
+                                                //이미지 확대기능
+                                                function scaleView(){
+                                                    document.addEventListener("DOMContentLoaded", function () {
+                                                        const screen = document.querySelector(".comScaleView");
+                                                        if(screen){
+                                                            const scaleBox = screen.querySelector(".scaleViewArea");
+                                                            let posX = 0;
+                                                            let posY = 0;
+                                                            screen.addEventListener("mousemove", function(e){
+                                                                const scrW = e.target.offsetWidth;
+                                                                const scrH = e.target.offsetHeight;
+                                                                const posX = e.offsetX;
+                                                                const posY = e.offsetY;
+                                                                const perX = posX*100/scrW;
+                                                                const perY = posY*100/scrH;;
+                                                                //console.log([scrW,scrH,posX, posY]);
+                                                                //console.log(e.target.style);
+                                                                scaleBox.style.cssText = "transform-origin:" + perX + "% " + perY + "%;";
+                                                            });
+                                                        }
+                                                    });
+                                                }
+                                                scaleView();
+                                            </script>
+                                            <!-- //20250324 추가 -->
+
+                                            <!-- //팝업 컨텐츠 영역 -->
+                                        </div>
+                                        <!-- <div class="popBtm">
+                                            <button class="btn gLine"  onclick="openPopup('sample06');">취소</button>
+                                            <button class="btn dkBlue"  onclick="openPopup('sample06');">계정신청</button>
+                                        </div> -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
 
 
